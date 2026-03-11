@@ -24,6 +24,18 @@ body {
   display: flex;
 }
 
+.rotate{
+transform:rotate(180deg);
+transition:0.3s;
+}
+.rotate2{
+transform:rotate(360deg);
+transition:0.3s;
+}
+.listitem:hover{
+  color: black ;
+  background-color: #ececec;
+}
 
 
 
