@@ -4,7 +4,9 @@ import Topbar from "../components/layout/Topbar"
 import Counter from "../components/layout/Counter"
 import DashboardCard from "../components/layout/DashboardCard";
 import Dashboard from "../pages/Dashboard";
+import { Outlet } from "react-router-dom";
 import "../styles/Layout.css";
+import Analytic from "../pages/Analytic";
 
 export default function Layout() {
 
@@ -54,15 +56,14 @@ export default function Layout() {
 
       <div className={`main ${sidebarState}`}>
         <Topbar toggleSidebar={toggleSidebar} />
-
-        <div className="content">
-
-        
-          <Dashboard />
-         
-        </div>
-
+       
+      
+             <div className="content">
+      <Outlet />
+    </div>
       </div>
+  
+     
 
     </div>
   );

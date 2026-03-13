@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Counter from "../components/layout/Counter";
 
 
 const Analytic = () => {
@@ -12,6 +13,7 @@ const Analytic = () => {
             <button onClick={() => setColor("blue")}>blue</button>
         </div>
       </div>
+      <Counter />
     </>
   )
 }
