@@ -7,7 +7,7 @@ export default function Topbar({ toggleSidebar }) {
   const { toggleTheme } = useContext(ThemeContext);
 
   return (
-    <nav className="topbar d-flex border-bottom">
+    <header className="topbar d-flex border-bottom">
 
 
 
@@ -52,7 +52,7 @@ export default function Topbar({ toggleSidebar }) {
       </div>
 
 
-    </nav>
+    </header>
 
 
   );
