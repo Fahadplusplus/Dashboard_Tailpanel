@@ -13,10 +13,10 @@ const DashboardCard = ({ cardTitle="Add Title", cardSubTitle="Add value", percen
 
     return (
         <>
-            <div className="card rounded-4 p-2 border-0 shadow-sm">
+            <div className="card rounded-4 p-2 border-0 shadow-sm Card">
                 <div className="card-body d-flex">
                     <div>
-                        <h6 className="card-title text-body-secondary" style={{ fontSize: "14px" }}>{cardTitle}</h6>
+                        <h6 className="card-title " style={{ fontSize: "14px" }}>{cardTitle}</h6>
                         <h2 className="card-subtitle my-2 fw-bold" style={{ letterSpacing: "2px", fontSize: "28px" }} >{extra} {cardSubTitle} {extra2}</h2>
 
                         <span className="d-flex">
@@ -24,7 +24,7 @@ const DashboardCard = ({ cardTitle="Add Title", cardSubTitle="Add value", percen
                                 <i className="bi bi-arrow-90deg-right m-0 p-0"></i>
                                 <p className="m-0 p-0 mx-1">{percent}</p>
                             </div>
-                            <p className="card-text ms-2" style={{ fontSize: "14px", color: "rgb(68, 68, 68)" }}>
+                            <p className="card-text ms-2" style={{ fontSize: "14px" }}>
                                 {cardText}
                             </p>
                         </span>
@@ -42,3 +42,6 @@ const DashboardCard = ({ cardTitle="Add Title", cardSubTitle="Add value", percen
 };
 
 export default DashboardCard;
+
+
+// #1c3038 card icon-bg color dark

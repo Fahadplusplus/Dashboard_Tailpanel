@@ -3,7 +3,7 @@ import DashboardCard from "../components/layout/DashboardCard";
 const Dashboard = () => {
       const cardsData = [
     { id: 1, cardTitle: "Total Revenue", extra:"$", cardSubTitle: 45231.89 , cardText: "vs last month",percent:"21.1%", icon: "bi bi-currency-dollar" },
-    { id: 2, cardTitle: "Active Users", cardSubTitle: 0, cardText: "vs last month", percent: "15.3%", icon: "bi bi-currency-dollar" },
+    { id: 2, cardTitle: "Active Users", cardSubTitle: 750, cardText: "vs last month", percent: "15.3%", icon: "bi bi-currency-dollar" },
     { id: 3, cardTitle: "Total Orders", cardSubTitle: 560, cardText: "vs last month", percent: "4.2%", icon: "bi bi-currency-dollar" },
     { id: 4, cardTitle: "Converstion Rate",extra2:"%", cardSubTitle: 3.42, cardText: "vs last month", percent: "8.7%", icon: "bi bi-currency-dollar" },
   

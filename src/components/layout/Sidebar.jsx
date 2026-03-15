@@ -185,13 +185,13 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                     {sidebarState !== "collapsed" && openMenu.includes("Authentication") && (
                         <ul className="submenu">
                             <li className="nav-item listitem rounded-2">
-                                <Link to="/analytics" className="nav-link d-flex align-items-center">
+                                <Link to="/login" className="nav-link d-flex align-items-center">
                                     <i className="bi bi-box-arrow-in-right me-2"></i>
                                     <span>Login</span>
                                 </Link>
                             </li>
                              <li className="nav-item listitem rounded-2">
-                                <Link to="/analytics" className="nav-link d-flex align-items-center">
+                                <Link to="/signup" className="nav-link d-flex align-items-center">
                                     <i className="bi bi-person-add me-2"></i>
                                     <span>Sign Up</span>
                                 </Link>

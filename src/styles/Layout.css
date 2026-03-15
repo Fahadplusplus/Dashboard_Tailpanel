@@ -2,12 +2,15 @@
   --sidebar-bg: #ffffff;
   --main-bg: #f5f6fa;
   --text: #222;
+  --Card-bg: #f5f6fa;
 }
 
 [data-theme="dark"] {
   --sidebar-bg: #0f172a;
   --main-bg: #020617;
   --text: white;
+  --Card-bg: #1f293b; 
+
 }
 .bi {
   color: var(--icon-color);
@@ -18,6 +21,10 @@ body {
   background: var(--main-bg);
   color: var(--text);
   font-family: sans-serif;
+}
+.Card{
+  background: var(--Card-bg);
+  color: var(--text);
 }
 
 .layout {
