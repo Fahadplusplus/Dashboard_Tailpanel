@@ -1,7 +1,31 @@
-import { Link } from "react-router-dom"
+import { Link,useNavigate } from "react-router-dom"
 
 
 const Login = () => {
+
+
+  const navigate = useNavigate()
+
+  const handelLogin = (e) => {
+    e.preventDefault()
+
+    const email = e.target.form[0].value
+    const password = e.target.form[1].value
+
+
+
+    if (email === "admin@gmail.com" && password === "1234") {
+      
+        
+
+      navigate("/") 
+
+    } else {
+      alert("Invalid credentials")
+    }
+  }
+
+  
 
     return (
         <>
@@ -68,7 +92,7 @@ const Login = () => {
                             </div>
 
                      
-                     <button  className="btn btn-primary w-100 py-2 mb-3">
+                     <button onClick={handelLogin}  className="btn btn-primary w-100 py-2 mb-3">
                                 Sign In →
                             </button>
                             
@@ -94,7 +118,7 @@ const Login = () => {
 
                     <p className="mt-4 ">
                         Don't have an account?
-                        <Link to="" className="text-decoration-none">Sign up for free</Link>
+                        <Link to="/signup" className="text-decoration-none">Sign up for free</Link>
                     </p>
 
                 </div>

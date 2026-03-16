@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
-import Sidebar from "../components/layout/Sidebar";
-import Topbar from "../components/layout/Topbar"
-
+import Sidebar from "../../components/layout/Sidebar";
+import Topbar from "../../components/layout/Topbar"
 import { Outlet } from "react-router-dom";
-import "../styles/Layout.css";
-
+import "../../styles/Layout.css";
 
 export default function Layout() {
 
@@ -44,6 +42,7 @@ export default function Layout() {
  
 
   return (
+    
     <div className="layout">
 
       <Sidebar

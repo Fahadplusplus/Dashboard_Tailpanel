@@ -167,7 +167,7 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                             {sidebarState === "expanded" && "Calendar"}
                         </Link>
                     </li>
-
+{/* 
                     <li className="nav-item listitem rounded-2" onClick={() => toggleMenu("Authentication")}>
 
                         <div className="nav-link d-flex align-items-center">
@@ -180,9 +180,9 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                                 </div>
                             )}
                         </div>
-                    </li>
+                    </li> */}
 
-                    {sidebarState !== "collapsed" && openMenu.includes("Authentication") && (
+                    {/* {sidebarState !== "collapsed" && openMenu.includes("Authentication") && (
                         <ul className="submenu">
                             <li className="nav-item listitem rounded-2">
                                 <Link to="/login" className="nav-link d-flex align-items-center">
@@ -203,7 +203,7 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                                 </Link>
                             </li>
                         </ul>
-                    )}
+                    )} */}
 
                     <li className="nav-item listitem rounded-2" onClick={() => toggleMenu("Pages")}>
 

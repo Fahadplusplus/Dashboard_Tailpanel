@@ -1,10 +1,17 @@
 import { useContext } from "react";
 
 import { ThemeContext } from "../../context/theme-context";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Topbar({ toggleSidebar }) {
+   const navigate = useNavigate()
 
   const { toggleTheme } = useContext(ThemeContext);
+   const logOut=()=>{
+     
+      navigate("/login")
+  }
 
   return (
     <nav className="topbar sticky-top d-flex border-bottom">
@@ -50,6 +57,7 @@ export default function Topbar({ toggleSidebar }) {
           <p className="p-0 m-0" style={{ fontSize: "10px" }}>admin@example.com</p>
         </div>
       </div>
+      <button className="btn btn-primary p-0 m-0 ms-3 px-2 py-1" onClick={logOut} style={{fontSize:"10px"}}>log out</button>
 
 
     </nav>
@@ -57,5 +65,3 @@ export default function Topbar({ toggleSidebar }) {
 
   );
 }
-
-
