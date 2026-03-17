@@ -5,7 +5,7 @@ function Signup() {
   return (
     <>
         
-    <div className="main-content container ">
+    <div className=" container ">
 
       
 
@@ -17,17 +17,17 @@ function Signup() {
             <h2 className="mb-0 lh-base" style={{fontSize: "28px", fontWeight: "bold"}}>TailPanel</h2>
           </div>
 
-          <p className="text-muted mb-4 mt-1">Sign in to your account</p>
+          <p className=" mb-4 mt-1">Sign in to your account</p>
 
        
-          <div className="card card-custom p-4 shadow-lg " style={{width: "400px"}}>
+          <div className="card Card card-custom p-4 shadow-lg " style={{width: "400px"}}>
 
             <form>
                   <div className="mb-3 text-start">
-                <label className="form-label text-secondary-emphasis fs-6">Full Name</label>
+                <label className="form-label t fs-6">Full Name</label>
                 <div className="input-group">
                   
-                    <i className="bi bi-person text-secondary input-group-text"></i>
+                    <i className="bi bi-person  input-group-text"></i>
                   
                   <input type="email" className="form-control " placeholder="John Doe"/>
                 </div>
@@ -35,10 +35,10 @@ function Signup() {
 
               
               <div className="mb-3 text-start">
-                <label className="form-label text-secondary-emphasis fs-6">Email Address</label>
+                <label className="form-label  fs-6">Email Address</label>
                 <div className="input-group">
                   
-                    <i className="bi bi-envelope text-secondary input-group-text"></i>
+                    <i className="bi bi-envelope  input-group-text"></i>
                   
                   <input type="email" className="form-control " placeholder="you@example.com"/>
                 </div>
@@ -93,7 +93,7 @@ function Signup() {
               </button>
 
               <button className="btn btn-outline-secondary social-btn w-100">
-                <i className="bi bi-github text-black me-2"></i> GitHub
+                <i className="bi bi-github  me-2"></i> GitHub
               </button>
             </div>
 
@@ -102,7 +102,7 @@ function Signup() {
 
                     <p className="mt-4 ">
                         Already have an account?
-                        <Link to="/login" className="text-decoration-none">Login</Link>
+                        <Link to="/" className="text-decoration-none">Login</Link>
                     </p>
 
                 </div>

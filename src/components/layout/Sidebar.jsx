@@ -32,7 +32,7 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                 <ul className="menu  ">
 
                     <li className="nav-item listitem rounded-2">
-                        <Link to="/" className="nav-link d-flex align-items-center">
+                        <Link to="/dashboard" className="nav-link d-flex align-items-center">
                             <i className="bi bi-speedometer2 me-2"></i>
 
                             {sidebarState !== "collapsed" && <span>Dashboard</span>}
@@ -150,6 +150,7 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                     <li className="nav-item my-2 listitem rounded-2">
                         <Link to="/analytics" className="nav-link d-flex align-items-center">
                             <i className="bi bi-table me-2"></i>
+                            
                             {sidebarState === "expanded" && "Tables"}
                         </Link>
                     </li>

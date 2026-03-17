@@ -18,7 +18,7 @@ const Login = () => {
       
         
 
-      navigate("/") 
+      navigate("/dashboard") 
 
     } else {
       alert("Invalid credentials")
@@ -86,9 +86,9 @@ const Login = () => {
                                     </label>
                                 </div>
 
-                                <a href="#" className="text-decoration-none small">
+                                <Link to="/resetpassword" className="text-decoration-none small">
                                     Forgot password?
-                                </a>
+                                </Link>
                             </div>
 
                      

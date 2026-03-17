@@ -10,11 +10,11 @@ export default function Topbar({ toggleSidebar }) {
   const { toggleTheme } = useContext(ThemeContext);
    const logOut=()=>{
      
-      navigate("/login")
+      navigate("/")
   }
 
   return (
-    <nav className="topbar sticky-top d-flex border-bottom">
+    <nav className="topbar  d-flex border-bottom ">
 
 
 
@@ -40,7 +40,7 @@ export default function Topbar({ toggleSidebar }) {
       </div>
       <div className="d-flex ms-auto  align-items-center">
         <div className="">
-          <input onClick={toggleTheme} type="checkbox" className="me-2" ></input>
+          <i onClick={toggleTheme} className="me-2 bi bi-brightness-high"  ></i>
           <i className="bi bi-search d-lg-none search me-2"></i>
           <i className="bi bi-tv me-2"></i>
           <i className="bi bi-bell me-2 "></i>
@@ -57,7 +57,7 @@ export default function Topbar({ toggleSidebar }) {
           <p className="p-0 m-0" style={{ fontSize: "10px" }}>admin@example.com</p>
         </div>
       </div>
-      <button className="btn btn-primary p-0 m-0 ms-3 px-2 py-1" onClick={logOut} style={{fontSize:"10px"}}>log out</button>
+      <button className="btn btn-primary p-0 m-0 ms-3 px-2 py-1 d-none d-md-block" onClick={logOut} style={{fontSize:"10px"}}>log out</button>
 
 
     </nav>

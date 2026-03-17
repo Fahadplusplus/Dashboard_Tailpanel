@@ -7,9 +7,9 @@ import "./index.css";
 import ThemeProvider from "./context/ThemeProvider";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <ThemeProvider>
+
  <App />
-  </ThemeProvider>
+
      
  
 

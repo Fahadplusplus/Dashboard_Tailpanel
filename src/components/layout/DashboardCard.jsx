@@ -13,8 +13,8 @@ const DashboardCard = ({ cardTitle="Add Title", cardSubTitle="Add value", percen
 
     return (
         <>
-            <div className="card rounded-4 p-2 border-0 shadow-sm Card">
-                <div className="card-body d-flex">
+            <div className="card rounded-4  border-0 shadow-sm Card  ">
+                <div className="card-body d-flex d-flex ">
                     <div>
                         <h6 className="card-title " style={{ fontSize: "14px" }}>{cardTitle}</h6>
                         <h2 className="card-subtitle my-2 fw-bold" style={{ letterSpacing: "2px", fontSize: "28px" }} >{extra} {cardSubTitle} {extra2}</h2>
