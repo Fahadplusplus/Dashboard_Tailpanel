@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import {useKindeAuth} from "@kinde-oss/kinde-auth-react";
 
 function Signup() {
+  const { register } = useKindeAuth();
   return (
     <>
         
@@ -77,7 +79,7 @@ function Signup() {
             
 
 
-              <button className="btn btn-primary w-100 py-2 mb-3">
+              <button onClick={register} type='button' className="btn btn-primary w-100 py-2 mb-3">
                 Create account
               </button>
 

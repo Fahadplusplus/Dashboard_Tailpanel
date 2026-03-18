@@ -1,29 +1,33 @@
-import { Link,useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
+import {useKindeAuth} from "@kinde-oss/kinde-auth-react";
+
+
+
 
 
 const Login = () => {
+const { login } = useKindeAuth();
+
+//   const navigate = useNavigate()
+
+//   const handelLogin = (e) => {
+//     e.preventDefault()
+
+//     const email = e.target.form[0].value
+//     const password = e.target.form[1].value
 
 
-  const navigate = useNavigate()
 
-  const handelLogin = (e) => {
-    e.preventDefault()
-
-    const email = e.target.form[0].value
-    const password = e.target.form[1].value
-
-
-
-    if (email === "admin@gmail.com" && password === "1234") {
+//     if (email === "admin@gmail.com" && password === "1234") {
       
         
 
-      navigate("/dashboard") 
+//       navigate("/dashboard") 
 
-    } else {
-      alert("Invalid credentials")
-    }
-  }
+//     } else {
+//       alert("Invalid credentials")
+//     }
+//   }
 
   
 
@@ -31,6 +35,7 @@ const Login = () => {
         <>
 
             <div className=" container  ">
+               
 
 
 
@@ -92,9 +97,10 @@ const Login = () => {
                             </div>
 
                      
-                     <button onClick={handelLogin}  className="btn btn-primary w-100 py-2 mb-3">
+                     <button onClick={login} type="button"  className="btn btn-primary w-100 py-2 mb-3">
                                 Sign In →
                             </button>
+                             {/* <button onClick={register}  type="button">Register</button> */}
                             
 
                         </form>
