@@ -14,7 +14,7 @@ export default function Topbar({ toggleSidebar }) {
   }
 
   return (
-    <nav className="topbar  d-flex border-bottom ">
+    <nav className="topbar  d-flex border-bottom  ">
 
 
 

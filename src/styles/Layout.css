@@ -1,16 +1,18 @@
 :root {
-  --sidebar-bg: #ffffff;
-  --main-bg: #f5f6fa;
-  --text: #222;
-  --Card-bg: #ffffff;
  
-}
 
-[data-theme="dark"] {
   --sidebar-bg: #0f172a;
   --main-bg: #020617;
   --text: white;
   --Card-bg: #1f293b; 
+ 
+}
+
+[data-theme="dark"] {
+   --sidebar-bg: #ffffff;
+  --main-bg: #f5f6fa;
+  --text: #222;
+  --Card-bg: #ffffff;
 
 }
 .bi {
@@ -154,7 +156,7 @@ transition:0.3s;
 /* TOPBAR */
 
 .topbar {
-  height: 60px;
+  
   background: var(--sidebar-bg);
    position: sticky;
    top: 0;
@@ -163,8 +165,17 @@ transition:0.3s;
   align-items: center;
   padding: 10px 20px;
   z-index: 10;
-  height: 70px;  
+  
+ 
 
+}
+.sidetop{
+height: 59px;
+}
+@media (min-width: 768px) {
+ .sidetop{
+height: 62px;
+}
 }
 
 .content {

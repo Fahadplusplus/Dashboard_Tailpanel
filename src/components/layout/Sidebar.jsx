@@ -14,7 +14,7 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
     return (
         <aside className={`sidebar ${sidebarState} border-end `} >
 
-            <div className="d-flex border-bottom justify-content-center " style={{ padding: "15.5px 0px 15px 0px " }}>
+            <div className="d-flex border-bottom justify-content-center  sidetop pt-3" >
                 <div className="logo  ">
                     <div className="d-flex align-items-center ps-4 ">
                         <div
@@ -23,10 +23,11 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                         >
                             T
                         </div>
-                        <h5 className="ms-2 mb-0 fw-bold">{sidebarState === "expanded" && "TailPanel"}</h5>
+                          {sidebarState !== "collapsed" && <h5 className="ms-2 mb-0 fw-bold">TailPanel</h5>}
+                      
                     </div>
                 </div>
-                <div className=" ms-auto" type="button" onClick={toggleSidebar}> <i className="bi bi-x d-block d-md-none"></i> </div>
+                <div className=" ms-auto " type="button" onClick={toggleSidebar}> <i className="bi bi-x d-block d-md-none"></i> </div>
             </div>
             <div className="sidebarscroll">
                 <ul className="menu  ">
@@ -48,7 +49,7 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                     </li>
 
                     <li className="nav-item my-2 listitem rounded-2">
-                        <Link to="/analytics"  className="nav-link d-flex align-items-center">
+                        <Link to="/usermanagemennt"  className="nav-link d-flex align-items-center">
                             <i className="bi bi-people me-2"></i>
 
                             {sidebarState !== "collapsed" && <span>User Management</span>}
@@ -73,19 +74,19 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                     {sidebarState !== "collapsed" && openMenu.includes("Showcase") && (
                         <ul className="submenu">
                             <li className="nav-item listitem rounded-2">
-                                <Link to="/analytics" className="nav-link d-flex align-items-center">
+                                <Link to="/showUiComponents" className="nav-link d-flex align-items-center">
                                     <i className="bi bi-stack me-2"></i>
                                     <span>UI Components</span>
                                 </Link>
                             </li>
                             <li className="nav-item listitem rounded-2">
-                                <Link to="/analytics" className="nav-link d-flex align-items-center">
+                                <Link to="/showForms" className="nav-link d-flex align-items-center">
                                     <i className="bi bi-stack me-2"></i>
                                     <span>Forms</span>
                                 </Link>
                             </li>
                             <li className="nav-item listitem rounded-2">
-                                <Link to="/analytics" className="nav-link d-flex align-items-center">
+                                <Link to="/showTables" className="nav-link d-flex align-items-center">
                                     <i className="bi bi-table me-2"></i>
                                     <span>Tables</span>
                                 </Link>
@@ -103,37 +104,37 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                                     <i className={`bi bi-chevron-down ms-auto ${openMenu.includes("E-Commerce") ? "rotate" : "rotate2"}`}></i>
                                 </div>
                             )}
-                        </div>
+                        </div>  
                     </li>
 
                     {sidebarState !== "collapsed" && openMenu.includes("E-Commerce") && (
                         <ul className="submenu">
                               <li className="nav-item listitem rounded-2">
-                                <Link  to="/analytics"  className="nav-link d-flex align-items-center">
+                                <Link  to="/eproduct"  className="nav-link d-flex align-items-center">
                                     <i className="bi bi-box me-2"></i>
                                     <span>Products</span>
                                 </Link>
                             </li>
                              <li className="nav-item listitem rounded-2">
-                                <Link to="/analytics" className="nav-link d-flex align-items-center">
+                                <Link to="/eaddProducts" className="nav-link d-flex align-items-center">
                                     <i className="bi bi-plus me-2"></i>
                                     <span>Add Products</span>
                                 </Link>
                             </li>
                              <li className="nav-item listitem rounded-2">
-                                <Link to="/analytics" className="nav-link d-flex align-items-center">
+                                <Link to="/einvoice" className="nav-link d-flex align-items-center">
                                     <i className="bi bi-file-earmark-richtext me-2"></i>
                                     <span>Invoice</span>
                                 </Link>
                             </li>
                              <li className="nav-item listitem rounded-2">
-                                <Link to="/analytics" className="nav-link d-flex align-items-center">
+                                <Link to="/ecreateInvoice" className="nav-link d-flex align-items-center">
                                     <i className="bi bi-file-earmark-richtext me-2"></i>
                                     <span>Create Invoice</span>
                                 </Link>
                             </li>
                              <li className="nav-item listitem rounded-2">
-                                <Link to="/analytics" className="nav-link d-flex align-items-center">
+                                <Link to="/etransaction" className="nav-link d-flex align-items-center">
                                     <i className="bi bi-shuffle me-2"></i>
                                     <span>Transactions</span>
                                 </Link>
@@ -141,70 +142,36 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                         </ul>
                     )}
                     <li className="nav-item my-2 listitem rounded-2">
-                        <Link to="/analytics" className="nav-link d-flex align-items-center">
+                        <Link to="/product" className="nav-link d-flex align-items-center">
                             <i className="bi bi-box-seam me-2"></i>
-                            {sidebarState === "expanded" && "Products"}
+                           {sidebarState !== "collapsed" && <span>Products</span>}
                         </Link>
                     </li>
 
                     <li className="nav-item my-2 listitem rounded-2">
-                        <Link to="/analytics" className="nav-link d-flex align-items-center">
+                        <Link to="/tables" className="nav-link d-flex align-items-center">
                             <i className="bi bi-table me-2"></i>
                             
-                            {sidebarState === "expanded" && "Tables"}
+                            
+                             {sidebarState !== "collapsed" && <span>Tables</span>}
                         </Link>
                     </li>
 
                     <li className="nav-item my-2 listitem rounded-2">
-                        <Link to="/analytics" className="nav-link d-flex align-items-center">
+                        <Link to="/forms" className="nav-link d-flex align-items-center">
                             <i className="bi bi-file-check me-2"></i>
-                            {sidebarState === "expanded" && "Forms"}
+                            
+                             {sidebarState !== "collapsed" && <span>Forms</span>}
                         </Link>
                     </li>
 
                     <li className="nav-item my-2 listitem rounded-2">
-                        <Link to="/analytics" className="nav-link d-flex align-items-center">
+                        <Link to="/calander" className="nav-link d-flex align-items-center">
                             <i className="bi bi-calendar-date me-2"></i>
-                            {sidebarState === "expanded" && "Calendar"}
+                            {sidebarState !== "collapsed" && <span>Calendar</span>}
                         </Link>
                     </li>
-{/* 
-                    <li className="nav-item listitem rounded-2" onClick={() => toggleMenu("Authentication")}>
 
-                        <div className="nav-link d-flex align-items-center">
-                            <i className="bi bi-cart me-2"></i>
-
-                            {sidebarState !== "collapsed" && (
-                                <div className="d-flex w-100">
-                                    <span>Authentication</span>
-                                    <i className={`bi bi-chevron-down ms-auto ${openMenu.includes("Authentication") ? "rotate" : "rotate2"}`}></i>
-                                </div>
-                            )}
-                        </div>
-                    </li> */}
-
-                    {/* {sidebarState !== "collapsed" && openMenu.includes("Authentication") && (
-                        <ul className="submenu">
-                            <li className="nav-item listitem rounded-2">
-                                <Link to="/login" className="nav-link d-flex align-items-center">
-                                    <i className="bi bi-box-arrow-in-right me-2"></i>
-                                    <span>Login</span>
-                                </Link>
-                            </li>
-                             <li className="nav-item listitem rounded-2">
-                                <Link to="/signup" className="nav-link d-flex align-items-center">
-                                    <i className="bi bi-person-add me-2"></i>
-                                    <span>Sign Up</span>
-                                </Link>
-                            </li>
-                             <li className="nav-item listitem rounded-2">
-                                <Link to="/analytics" className="nav-link d-flex align-items-center">
-                                    <i className="bi bi-key me-2"></i>
-                                    <span>Reset Password</span>
-                                </Link>
-                            </li>
-                        </ul>
-                    )} */}
 
                     <li className="nav-item listitem rounded-2" onClick={() => toggleMenu("Pages")}>
 
@@ -223,19 +190,19 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                     {sidebarState !== "collapsed" && openMenu.includes("Pages") && (
                         <ul className="submenu">
                           <li className="nav-item listitem rounded-2">
-                                <Link to="/analytics" className="nav-link d-flex align-items-center">
+                                <Link to="/filemanager" className="nav-link d-flex align-items-center">
                                     <i className="bi bi-folder me-2"></i>
                                     <span>File Manager</span>
                                 </Link>
                             </li>
                              <li className="nav-item listitem rounded-2">
-                                <Link to="/analytics" className="nav-link d-flex align-items-center">
+                                <Link to="/pricingtable" className="nav-link d-flex align-items-center">
                                     <i className="bi bi-currency-dollar me-2"></i>
                                     <span>Pricing Table</span>
                                 </Link>
                             </li>
                              <li className="nav-item listitem rounded-2">
-                                <Link to="/analytics" className="nav-link d-flex align-items-center">
+                                <Link to="/faqs" className="nav-link d-flex align-items-center">
                                     <i className="bi bi-question-circle me-2"></i>
                                     <span>FAQ</span>
                                 </Link>
@@ -244,16 +211,17 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                     )}
 
                     <li className="nav-item my-2 listitem rounded-2">
-                        <Link to="/analytics" className="nav-link d-flex align-items-center">
+                        <Link to="/profile" className="nav-link d-flex align-items-center">
                             <i className="bi bi-person-fill-gear me-2"></i>
-                            {sidebarState === "expanded" && "Profile"}
+                            
+                             {sidebarState !== "collapsed" && <span>Profile</span>}
                         </Link>
                     </li>
 
                     <li className="nav-item my-2 listitem rounded-2">
-                        <Link to="/analytics" className="nav-link d-flex align-items-center">
+                        <Link to="/setting" className="nav-link d-flex align-items-center">
                             <i className="bi bi-gear me-2"></i>
-                            {sidebarState === "expanded" && "Settings"}
+                            {sidebarState !== "collapsed" && <span>Setting</span>}
                         </Link>
                     </li>
                 </ul>
@@ -264,8 +232,9 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                     AS
                 </div>
                 <div className="ms-2">
-                    <small className="fw-bold d-block">Admin User</small>
-                    <small className="">admin@example.com</small>
+                     {sidebarState !== "collapsed" && <small className="fw-bold d-block">Admin User</small>}
+                    {sidebarState !== "collapsed" && <small className="">admin@example.com</small>}
+                    
                 </div>
             </div>
 
