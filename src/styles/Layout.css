@@ -1,24 +1,32 @@
 :root {
  
 
-  --sidebar-bg: #0f172a;
-  --main-bg: #020617;
-  --text: white;
-  --Card-bg: #1f293b; 
  
-}
 
-[data-theme="dark"] {
    --sidebar-bg: #ffffff;
   --main-bg: #f5f6fa;
   --text: #222;
   --Card-bg: #ffffff;
+  --icon-bg: #136dfa;
+   --icon-cross: #ffffff;
+}
+
+[data-theme="dark"] {
+   --sidebar-bg: #0f172a;
+  --main-bg: #020617;
+  --text: white;
+  --Card-bg: #1f293b; 
+    --icon-bg: white;
+  --icon-cross: black;
 
 }
 .bi {
   color: var(--icon-color);
 }
-
+.cross{ 
+  color: var(--icon-cross);
+  background-color:var(--icon-bg) ;
+}
 body {
   margin: 0;
   background: var(--main-bg) !important;
@@ -74,11 +82,24 @@ transition:0.3s;
 }
 .listitem:hover{
   color: black ;
-  background-color: #ececec;
+  background: #ececec;
+}
+.listitem{ 
+  
+  margin-bottom: 14px !important;
+  
 }
 
+.active {
+  
+   color: black !important; ;
+  background: #ececec !important;
 
+}
 
+.active-class{
+  padding: 10px 10px 10px 10px !important;
+}
 
 .submenu {
   padding-left: 30px;
@@ -111,7 +132,7 @@ transition:0.3s;
 }
 
 .sidebar.collapsed {
-  width: 70px;
+  width: 80px;
 }
 
 .sidebar.mobileOpen {

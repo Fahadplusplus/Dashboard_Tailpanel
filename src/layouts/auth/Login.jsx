@@ -1,34 +1,75 @@
 import { Link } from "react-router-dom"
-import {useKindeAuth} from "@kinde-oss/kinde-auth-react";
+import { useNavigate } from "react-router-dom"  
+
+import { useState } from "react"
+import axios from "axios"
+import { toast } from "react-toastify";
+
 
 
 
 
 
 const Login = () => {
-const { login } = useKindeAuth();
 
-//   const navigate = useNavigate()
+    const [showPassword, setShowPassword] = useState(false)
 
-//   const handelLogin = (e) => {
-//     e.preventDefault()
+    const [username, setUsername] = useState("")
+    const [password, setPassword] = useState("")
 
-//     const email = e.target.form[0].value
-//     const password = e.target.form[1].value
+   const navigate = useNavigate()
+
+  const handelLogin = async (e) => {
+     e.preventDefault();
+        if(validate()){
+              try {
+    const result = await axios.get(
+      `http://localhost:8000/users?username=${username}&password=${password}`
+    )
+
+    if (result.data.length > 0) {
+    
+    toast.success("Login successful ✅" , {
+  position: "top-right",
+  autoClose: 1500,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  
+  
+});
+setTimeout(() => {
+  navigate("/dashboard");
+}, 1500);
+ 
+    } else {
+      alert("Invalid username or password");
+    }
+  } catch (error) {
+    console.error("Error during login:", error);
+    alert("An error occurred during login. Please try again.");
+  }
+            
+        }
+    }  
 
 
 
-//     if (email === "admin@gmail.com" && password === "1234") {
-      
-        
+  const validate=()=>{
+    let result = true;
+    if(username === "" || password === ""){
+      result = false;
+      alert("Please fill in all fields");
+    }
+    if(password === ""){
+      result = false;
+      alert("Password must be at least 6 characters long");
+    }
+    return result;
+  
 
-//       navigate("/dashboard") 
-
-//     } else {
-//       alert("Invalid credentials")
-//     }
-//   }
-
+  }
   
 
     return (
@@ -56,7 +97,7 @@ const { login } = useKindeAuth();
 
 
                             <div className="mb-3 text-start">
-                                <label className="form-label  fs-6">Email Address</label>
+                                <label className="form-label  fs-6">Username</label>
                                 <div className="input-group">
                                      <span className="input-group-text ">
                                          <i className="bi bi-envelope "></i>
@@ -64,7 +105,7 @@ const { login } = useKindeAuth();
 
                                   
 
-                                    <input type="email" className="form-control " placeholder="you@example.com" />
+                                    <input value={username} onChange={(e) => setUsername(e.target.value)}  type="text" className="form-control " placeholder="username" />
                                 </div>
                             </div>
 
@@ -75,9 +116,9 @@ const { login } = useKindeAuth();
                                     <span className="input-group-text ">
                                         <i className="bi bi-lock"></i>
                                     </span>
-                                    <input type="password" className="form-control" placeholder="••••••••" />
-                                    <span className="input-group-text">
-                                        <i className="bi bi-eye"></i>
+                                    <input value={password} onChange={(e) => setPassword(e.target.value)} type={showPassword ? "text" : "password"} className="form-control" placeholder="••••••••" />
+                                    <span onClick={() => setShowPassword(!showPassword)} className="input-group-text">
+                                        <i className={`bi ${showPassword ? "bi-eye-slash" : "bi-eye"}`}></i>
                                     </span>
                                 </div>
                             </div>
@@ -97,10 +138,10 @@ const { login } = useKindeAuth();
                             </div>
 
                      
-                     <button onClick={login} type="button"  className="btn btn-primary w-100 py-2 mb-3">
+                     <button onClick={handelLogin}  type="button"  className="btn btn-primary w-100 py-2 mb-3">
                                 Sign In →
                             </button>
-                             {/* <button onClick={register}  type="button">Register</button> */}
+                           
                             
 
                         </form>

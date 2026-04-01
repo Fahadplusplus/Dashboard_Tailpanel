@@ -27,6 +27,9 @@ import Faqs from "../pages/Faqs";
 import PricingTable from "../pages/PricingTable";
 import FileManager from "../pages/FileManager";
 
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+
 export default function AppRoutes() {
   return (
     <BrowserRouter>
@@ -64,6 +67,7 @@ export default function AppRoutes() {
         </Route>
 
       </Routes>
+      <ToastContainer/>
     </BrowserRouter>
   );
 }

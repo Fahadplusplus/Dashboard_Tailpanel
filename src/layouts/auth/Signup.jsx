@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import {useKindeAuth} from "@kinde-oss/kinde-auth-react";
+
+
 
 function Signup() {
-  const { register } = useKindeAuth();
+  const [showPassword, setShowPassword] = useState(false)
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+ 
   return (
     <>
         
@@ -26,12 +29,12 @@ function Signup() {
 
             <form>
                   <div className="mb-3 text-start">
-                <label className="form-label t fs-6">Full Name</label>
+                <label className="form-label t fs-6">Username</label>
                 <div className="input-group">
                   
                     <i className="bi bi-person  input-group-text"></i>
                   
-                  <input type="email" className="form-control " placeholder="John Doe"/>
+                  <input type="text" className="form-control " placeholder="John Doe"/>
                 </div>
               </div>
 
@@ -53,9 +56,9 @@ function Signup() {
                   <span className="input-group-text bg-white">
                     <i className="bi bi-lock"></i>
                   </span>
-                  <input type="password" className="form-control" placeholder="••••••••"/>
-                  <span className="input-group-text bg-white">
-                    <i className="bi bi-eye"></i>
+                  <input type={showPassword ? "text" : "password"} className="form-control" placeholder="••••••••"/>
+                  <span onClick={()=> setShowPassword(!showPassword)} className="input-group-text bg-white">
+                    <i className={`bi ${showPassword ? "bi-eye-slash" : "bi-eye"}`}></i>
                   </span>
                 </div>
               </div>
@@ -65,9 +68,9 @@ function Signup() {
                   <span className="input-group-text bg-white">
                     <i className="bi bi-lock"></i>
                   </span>
-                  <input type="password" className="form-control" placeholder="••••••••"/>
-                  <span className="input-group-text bg-white">
-                    <i className="bi bi-eye"></i>
+                  <input type={showConfirmPassword ? "text" : "password"} className="form-control" placeholder="••••••••"/>
+                  <span onClick={()=> setShowConfirmPassword(!showConfirmPassword)} className="input-group-text bg-white">
+                    <i className={ `bi ${showConfirmPassword ? "bi-eye-slash" : "bi-eye"}`}></i>
                   </span>
                 </div>
               </div>
@@ -79,7 +82,7 @@ function Signup() {
             
 
 
-              <button onClick={register} type='button' className="btn btn-primary w-100 py-2 mb-3">
+              <button  type='button' className="btn btn-primary w-100 py-2 mb-3">
                 Create account
               </button>
 
