@@ -13,7 +13,7 @@ export default function Forms() {
   const [editIndex, setEditIndex] = useState(null);
 
   const [data, setData] = useState(EmployData);
-  
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -41,12 +41,12 @@ export default function Forms() {
     e.preventDefault();
 
     if (editIndex !== null) {
-      // update
+    
       const updated = [...data];
       updated[editIndex] = formData;
       setData(updated);
     } else {
-      // add
+      
       setData([...data, { ...formData, id: Date.now() }]);
     }
 
@@ -61,17 +61,15 @@ export default function Forms() {
         Add User
       </button>
 
-      <div className='border my-3 overflow-auto'>
-
-
-        <table className="table">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Age</th>
-              <th>Actions</th>
+      <div className="border my-3 overflow-auto">
+        <table className="table table-hover mb-0">
+          <thead className="table-light">
+            <tr className=''>
+              <th scope="col">#</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Age</th>
+              <th scope="col" className='text-center'>Actions</th>
             </tr>
           </thead>
 
@@ -82,9 +80,9 @@ export default function Forms() {
                 <td>{item.firstname}</td>
                 <td>{item.lastname}</td>
                 <td>{item.age}</td>
-                <td>
-                  <button onClick={() => handleEdit(index)}>Edit</button>
-                  <button onClick={() => handleDelete(index)}>Delete</button>
+                <td className=' text-center '>
+                  <i onClick={() => handleEdit(index)} className='bi bi-pencil-square fs-3 text-primary'></i>
+                  <i onClick={() => handleDelete(index)} className='bi bi-trash fs-3 ps-3 text-danger'></i>
                 </td>
               </tr>
             ))}
@@ -92,43 +90,58 @@ export default function Forms() {
         </table>
       </div>
       {showModal && (
-  <div className="modal-overlay">
-    <div className="modal-box">
-      <h3>{editIndex !== null ? "Edit User" : "Add User"}</h3>
+        <div className="modal-overlay " >
+          <div className="modal-box " style={{ width: "400px", height: "380px" }}>
+            <div className='d-flex mb-3' >
+              <h3>{editIndex !== null ? "Edit User" : "Add User"}</h3>
+              <i className='bi bi-x fs-3 ms-auto text-white rounded-1 px-1 p-0 py-0 bg-danger'  type="button" onClick={() => setShowModal(false)}>
 
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="firstname"
-          placeholder="First Name"
-          value={formData.firstname}
-          onChange={handleChange}
-        />
+              </i>
+            </div>
 
-        <input
-          type="text"
-          name="lastname"
-          placeholder="Last Name"
-          value={formData.lastname}
-          onChange={handleChange}
-        />
 
-        <input
-          type="number"
-          name="age"
-          placeholder="Age"
-          value={formData.age}
-          onChange={handleChange}
-        />
+            <form onSubmit={handleSubmit} className="" >
+              <div className=''>
+                <label > First Name</label>
+                <input
+                  className='form-control mb-3 '
+                  type="text"
+                  name="firstname"
+                  required
+                  value={formData.firstname}
+                  onChange={handleChange}
 
-        <button type="submit">Save</button>
-        <button type="button" onClick={() => setShowModal(false)}>
-          Cancel
-        </button>
-      </form>
-    </div>
-  </div>
-)}
+                />
+                <label>Last Name</label>
+                <input
+
+                  className='form-control mb-3'
+                  type="text"
+                  name="lastname"
+                  required
+                  value={formData.lastname}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <label>Age</label>
+              <input
+                className='form-control'
+                type="number"
+                name="age"
+                required
+                value={formData.age}
+                onChange={handleChange}
+              />
+              <div className='d-flex justify-content-center mt-4'>
+                <button className='btn btn-primary ' type="submit">Save</button>
+              </div>
+
+
+            </form>
+          </div>
+        </div>
+      )}
     </>
   );
 }

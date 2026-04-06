@@ -2,13 +2,18 @@ import { useContext } from "react";
 
 import { ThemeContext } from "../../context/theme-context";
 import { useNavigate } from "react-router-dom";
+import UserContext from "../../context/userContext";
 
 
 export default function Topbar({ toggleSidebar }) {
+  const {setUser} = useContext(UserContext)
+    const {user} = useContext(UserContext)
    const navigate = useNavigate()
 
   const { toggleTheme } = useContext(ThemeContext);
    const logOut=()=>{
+    setUser(null);
+       localStorage.removeItem("authUser");
      
       navigate("/")
   }
@@ -48,13 +53,13 @@ export default function Topbar({ toggleSidebar }) {
 
         <div className="d-flex">
           <div className="rounded-circle bg-primary mx-2 py-1 px-2 text-white">
-            AS
+            {user?.username?.slice(0, 2).toUpperCase()}
           </div>
         </div>
 
         <div className="d-none d-lg-block justify-content-center align-items-center">
-          <h2 className="m-0 p-0" style={{ fontSize: "12px" }}>Admin User</h2>
-          <p className="p-0 m-0" style={{ fontSize: "10px" }}>admin@example.com</p>
+          <h2 className="m-0 p-0" style={{ fontSize: "12px" }}>{user?.username}</h2>
+          <p className="p-0 m-0" style={{ fontSize: "10px" }}>{user?.email}</p>
         </div>
       </div>
       <button className="btn btn-primary p-0 m-0 ms-3 px-2 py-1 d-none d-md-block" onClick={logOut} style={{fontSize:"10px"}}>log out</button>

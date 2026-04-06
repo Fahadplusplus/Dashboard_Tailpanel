@@ -3,6 +3,7 @@ import Layout from "../layouts/main/Layout";
 import Login from "../layouts/auth/Login";
 import Signup from "../layouts/auth/Signup";
 import ProcetedRoutes from "../layouts/auth/ProcetedRoutes"
+import PublicRoute from "../layouts/auth/PublicRoutes";
 
 import Dashboard from "../pages/Dashboard";
 import Analytic from "../pages/Analytic";
@@ -18,7 +19,7 @@ import EcreateInvoice from "../pages/EcreateInvoice";
 import Etransaction from "../pages/Etransaction";
 import Product from "../pages/Product";
 import Calander from "../pages/Calander";
-import Pages from "../pages/FileManager";
+
 import Profile from "../pages/Profile";
 import Setting from "../pages/Setting";
 import Tables from "../pages/Tables";
@@ -35,10 +36,12 @@ export default function AppRoutes() {
     <BrowserRouter>
       <Routes>
 
-        {/* Public Routes */}
-        <Route path="/" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/resetpassword" element={<ResetPassword />} />
+        <Route element={<PublicRoute />}>
+          <Route path="/" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/resetpassword" element={<ResetPassword />} />
+        </Route>
+
 
         {/* Protected Routes */}
         <Route element={<ProcetedRoutes />}>
@@ -67,7 +70,7 @@ export default function AppRoutes() {
         </Route>
 
       </Routes>
-      <ToastContainer/>
+      <ToastContainer />
     </BrowserRouter>
   );
 }

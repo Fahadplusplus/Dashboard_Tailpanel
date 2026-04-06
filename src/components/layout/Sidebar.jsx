@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState,useContext } from "react";
 import {NavLink, Link} from 'react-router-dom'
+import UserContext from "../../context/userContext";
 
 export default function Sidebar({ sidebarState, toggleSidebar }) {
 
-
+        const {user} = useContext(UserContext)
     const [openMenu, setOpenMenu] = useState([]);
 
     const toggleMenu = (menu) => {
@@ -229,11 +230,11 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
             </div>
             <div className="d-flex align-items-center px-3 pb-3">
                 <div className="rounded-circle bg-primary text-white px-2 py-1">
-                    AS
+                     {user?.username?.slice(0, 2).toUpperCase()}
                 </div>
-                <div className="ms-2">
-                     {sidebarState !== "collapsed" && <small className="fw-bold d-block">Admin User</small>}
-                    {sidebarState !== "collapsed" && <small className="">admin@example.com</small>}
+                <div className="ms-2 ">
+                     {sidebarState !== "collapsed" && <small className="fw-bold d-block">{user?.username}</small>}
+                    {sidebarState !== "collapsed" && <small className="">{user?.email}</small>}
                     
                 </div>
             </div>

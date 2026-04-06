@@ -172,7 +172,7 @@ if (hasNumbers.test(username)) {
               </div>
               <div className="d-flex align-items-center my-4">
                 <input type="checkbox" />
-                <p className="m-0 text-primary" style={{ fontSize: "small" }}>I agree to the Terms of Service and Privacy Policy</p>
+                <p className="m-0 text-primary ms-2" style={{ fontSize: "small" }}>I agree to the Terms of Service and Privacy Policy</p>
               </div>
 
 
