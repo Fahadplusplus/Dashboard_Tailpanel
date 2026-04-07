@@ -229,12 +229,20 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
 
             </div>
             <div className="d-flex align-items-center px-3 pb-3">
-                <div className="rounded-circle bg-primary text-white px-2 py-1">
+                <div className="rounded-circle bg-primary text-white p-2 " >
                      {user?.username?.slice(0, 2).toUpperCase()}
                 </div>
                 <div className="ms-2 ">
-                     {sidebarState !== "collapsed" && <small className="fw-bold d-block">{user?.username}</small>}
-                    {sidebarState !== "collapsed" && <small className="">{user?.email}</small>}
+                    <div className="">
+                         {sidebarState !== "collapsed" && <p className="m-0 fw-bold" style={{fontSize:"13px"}}>{user?.username}</p>}
+                    </div>
+                   
+                   <div className="">
+                     {sidebarState !== "collapsed" && <p className="m-0 " style={{fontSize:"11px"}}>{user?.email}</p>}
+                   </div>
+                     
+                     
+                 
                     
                 </div>
             </div>

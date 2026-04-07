@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
-import { useNavigate,Navigate } from "react-router-dom"
+import { useNavigate, Navigate } from "react-router-dom"
 import UserContext from "../../context/userContext"
-import { useContext,useState } from "react"
+import { useContext, useState } from "react"
 import axios from "axios"
 import { toast } from "react-toastify";
 
@@ -11,14 +11,15 @@ import { toast } from "react-toastify";
 
 
 const Login = () => {
-   
+
 
     const [showPassword, setShowPassword] = useState(false)
 
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
-      const {setUser} = useContext(UserContext)
-     
+    const [remember, setRemember] = useState(false);
+    const { setUser } = useContext(UserContext)
+
 
     const navigate = useNavigate()
 
@@ -33,14 +34,20 @@ const Login = () => {
 
                 if (result.data.length > 0) {
                     const loggedUser = result.data[0]
-                     setUser(loggedUser)
-                    localStorage.setItem("authUser", JSON.stringify(loggedUser));
-                    console.log(loggedUser);
-                    
-                   
+                    setUser(loggedUser)
+                    if (remember) {
+                        localStorage.setItem("authUser", JSON.stringify(loggedUser));
+                        sessionStorage.removeItem("authUser");
+                    } else {
+                        sessionStorage.setItem("authUser", JSON.stringify(loggedUser));
+                        localStorage.removeItem("authUser");
+                    }
+                  
 
-                 
-                 
+
+
+
+
                     toast.success("Login successful ✅", {
                         position: "top-right",
                         autoClose: 1500,
@@ -153,7 +160,12 @@ const Login = () => {
 
                             <div className="d-flex justify-content-between align-items-center mb-3">
                                 <div className="form-check">
-                                    <input className="form-check-input" type="checkbox"  id="remember" />
+                                    <input className="form-check-input"
+                                        type="checkbox"
+                                        id="remember"
+                                        checked={remember}
+                                        onChange={(e) => setRemember(e.target.checked)}
+                                    />
                                     <label className="form-check-label" >
                                         Remember me
                                     </label>
