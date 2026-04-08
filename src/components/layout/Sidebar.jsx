@@ -35,7 +35,7 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
 
                     <li className="nav-item p-0 listitem rounded-2">
                         <NavLink to="/dashboard" className="nav-link active-class rounded-2  d-flex  align-items-center ">
-                            <i className="bi bi-speedometer2 me-2"></i>
+                            <i className="bi bi-speedometer2 me-2 "></i>
 
                             {sidebarState !== "collapsed" && <span>Dashboard</span>}
                         </NavLink>
@@ -229,7 +229,7 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
 
             </div>
             <div className="d-flex align-items-center px-3 pb-3">
-                <div className="rounded-circle bg-primary text-white p-2 " >
+                <div className="rounded-circle bg-primary text-white py-1 px-2 " >
                      {user?.username?.slice(0, 2).toUpperCase()}
                 </div>
                 <div className="ms-2 ">

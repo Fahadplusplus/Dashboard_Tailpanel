@@ -94,15 +94,17 @@ transition:0.3s;
 
 .active {
   
-   color: black !important; ;
+   color: #136dfa !important; ;
   background: #ececec !important;
 
 }
 
 .active-class{
-  padding: 10px 10px 10px 10px !important;
+  padding: 12px 10px 12px 10px !important;
 }
-
+.nav-link.active i {
+  color: #136dfa !important;
+}
 .submenu {
   padding-left: 30px;
   list-style: none;

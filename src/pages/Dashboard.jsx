@@ -1,14 +1,12 @@
 import DashboardCard from "../components/layout/DashboardCard";
 import Highchart from "../components/charts/Highchart";
+import OrdersCard from "../components/layout/OrdersCard";
+import TopProductCard from "../components/layout/TopProductCard";
+import Card from "../components/layout/dashboardcard/Card";
+
 
 const Dashboard = () => {
-  const cardsData = [
-    { id: 1, cardTitle: "Total Revenue", extra: "$", cardSubTitle: 45231.89, cardText: "vs last month", percent: "21.1%", icon: "bi bi-currency-dollar" },
-    { id: 2, cardTitle: "Active Users", cardSubTitle: 750, cardText: "vs last month", percent: "15.3%", icon: "bi bi-currency-dollar" },
-    { id: 3, cardTitle: "Total Orders", cardSubTitle: 560, cardText: "vs last month", percent: "4.2%", icon: "bi bi-currency-dollar" },
-    { id: 4, cardTitle: "Converstion Rate", extra2: "%", cardSubTitle: 3.42, cardText: "vs last month", percent: "8.7%", icon: "bi bi-currency-dollar" },
-
-  ];
+ 
 
   const lineChartOptions = {
     title: { text: "Sales" },
@@ -33,29 +31,20 @@ const Dashboard = () => {
     series: [
       {
         name: "Users",
-        data: [5, 15, 25, 35]
+        data: [5, 15, 25, 100]
       }
     ]
   };
   return (
     <>
       <div className="content   ">
+          <h1>Dashboard Content</h1> 
 
-        <h1>Dashboard Content</h1>
+
+
+       
         <div className="row">
-          {cardsData.map((card) => (
-            <div className="col-12 col-md-6 col-xxl-3 g-3" key={card.id}>
-              <DashboardCard
-                cardTitle={card.cardTitle}
-                extra={card.extra}
-                cardSubTitle={card.cardSubTitle}
-                cardText={card.cardText}
-                extra2={card.extra2}
-                percent={card.percent}
-                icon={card.icon}
-              />
-            </div>
-          ))}
+            <Card />
         </div>
 
 
@@ -70,7 +59,7 @@ const Dashboard = () => {
 
             </div>
             <div className="col-12 col-md-6">
-              <div className="card">
+              <div className="shadow-sm">
                 <Highchart options={barChartOptions} />
               </div>
             </div>
@@ -80,6 +69,18 @@ const Dashboard = () => {
       
       </div>
 
+<div className="content">
+ <div className="row">
+  <div className="col-12 col-md-6">
+      <OrdersCard />
+  </div>
+   <div className="col-12 col-md-6">
+      <TopProductCard  />
+  </div>
+
+ </div>
+
+</div>
 
 
 

@@ -1,7 +1,12 @@
-import React from 'react'
+import Product from "../components/layout/E-commerceProducts/Product" 
 
 export default function Eproduct() {
   return (
-    <div>Eproduct</div>
+    <>
+       <div className="fw-bold mb-3">Product</div>
+       <Product />
+
+    </>
+  
   )
 }

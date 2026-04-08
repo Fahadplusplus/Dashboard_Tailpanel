@@ -4,7 +4,8 @@ import UserContext from "../../context/userContext"
 import { useContext, useState } from "react"
 import axios from "axios"
 import { toast } from "react-toastify";
-
+import { GoogleLogin } from "@react-oauth/google"
+import { jwtDecode } from "jwt-decode"
 
 
 
@@ -42,7 +43,7 @@ const Login = () => {
                         sessionStorage.setItem("authUser", JSON.stringify(loggedUser));
                         localStorage.removeItem("authUser");
                     }
-                  
+
 
 
 
@@ -187,8 +188,24 @@ const Login = () => {
 
 
                         <div className="divider  my-2">-----------Or continue with-----------</div>
+                        <GoogleLogin
+                            onSuccess={(res) => {
+                                const decoded = jwtDecode(res.credential);
 
+                                const user = {
+                                    username: decoded.name,
+                                    email: decoded.email,
+                                    picture: decoded.picture,
+                                };
 
+                                localStorage.setItem("authUser", JSON.stringify(user));
+                                setUser(user);
+                                navigate("/dashboard");
+                            }}
+                            onError={() => console.log("Login Failed")}
+                        />
+
+                        {/* 
                         <div className="d-grid gap-2 d-flex justify-content-between mt-2">
                             <button className="btn btn-outline-secondary social-btn w-100">
                                 <i className="bi bi-google  me-2"></i> Google
@@ -197,7 +214,7 @@ const Login = () => {
                             <button className="btn btn-outline-secondary social-btn w-100">
                                 <i className="bi bi-github  me-2"></i> GitHub
                             </button>
-                        </div>
+                        </div> */}
 
                     </div>
 
