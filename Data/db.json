@@ -1,22 +1,109 @@
 {
-
-  "productsData":[
+  "productsData": [
     {
-      "id":"a456",
-      "link":"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
-      "name":"Smart watch",
-      "category":"Electronics • SW-002",
+      "id": "a456",
+      "link": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
+      "name": "Smart watch",
+      "category": "Electronics • SW-002",
       "price": 100,
-       "stock":"Low Stock",
+      "stock": "Low Stock",
       "quantity": 10,
-      "sold":10
-
+      "sold": 10
+    },
+    {
+      "id": "271f",
+      "link": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
+      "name": "smart watch",
+      "category": "electronic 007",
+      "price": "500",
+      "stock": "In Stock",
+      "quantity": "100",
+      "sold": "8"
+    },
+    {
+      "id": "b58b",
+      "link": "delete  * orders ",
+      "name": "aksjbdkj",
+      "category": "naskjdnjka",
+      "price": "87",
+      "stock": "In Stock",
+      "quantity": "78",
+      "sold": "98"
+    },
+    {
+      "id": "4baf",
+      "link": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop",
+      "name": "kknvsldk",
+      "category": "klsndlkf",
+      "price": "787",
+      "stock": "In Stock",
+      "quantity": "98",
+      "sold": "89"
+    },
+    {
+      "id": "211a",
+      "link": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop",
+      "name": "kknvsldk",
+      "category": "klsndlkf",
+      "price": "787",
+      "stock": "In Stock",
+      "quantity": "98",
+      "sold": "89"
+    },
+    {
+      "id": "2d7b",
+      "link": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
+      "name": "watch",
+      "category": "skhbasihd",
+      "price": "78",
+      "stock": "In Stock",
+      "quantity": "8",
+      "sold": "88"
+    },
+    {
+      "id": "7568",
+      "link": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
+      "name": "sfsd",
+      "category": "ascsad",
+      "price": "45",
+      "stock": "In Stock",
+      "quantity": "45",
+      "sold": "65"
+    },
+    {
+      "id": "7dba",
+      "link": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
+      "name": "smart watch",
+      "category": "sjnksjnd",
+      "price": "85",
+      "stock": "Low Stock",
+      "quantity": "85",
+      "sold": "85"
+    },
+    {
+      "id": "0729",
+      "link": "",
+      "name": "smart watch",
+      "category": "fahad",
+      "price": "100",
+      "stock": "In Stock",
+      "quantity": "12",
+      "sold": "12"
+    },
+    {
+      "id": "8959",
+      "link": "",
+      "name": "fahad",
+      "category": "dahjajh",
+      "price": "74",
+      "stock": "In Stock",
+      "quantity": "74",
+      "sold": "74"
     }
-
   ],
   "cardsData": [
     {
-      "id": 1,
+      "id": "1",
       "cardTitle": "Total Revenue",
       "extra": "$",
       "cardSubTitle": 45231.89,
@@ -25,7 +112,7 @@
       "icon": "bi bi-currency-dollar"
     },
     {
-      "id": 2,
+      "id": "2",
       "cardTitle": "Active Users",
       "cardSubTitle": 750,
       "cardText": "vs last month",
@@ -33,7 +120,7 @@
       "icon": "bi bi-currency-dollar"
     },
     {
-      "id": 3,
+      "id": "3",
       "cardTitle": "Total Orders",
       "cardSubTitle": 560,
       "cardText": "vs last month",
@@ -41,7 +128,7 @@
       "icon": "bi bi-currency-dollar "
     },
     {
-      "id": 4,
+      "id": "4",
       "cardTitle": "Converstion Rate",
       "extra2": "%",
       "cardSubTitle": 3.42,
@@ -55,13 +142,15 @@
       "name": "John Doe",
       "product": "Wireless Headphones",
       "price": 129.99,
-      "status": "Completed"
+      "status": "Completed",
+      "id": "f6a1"
     },
     {
       "name": "Jane Smith",
       "product": "Smart Watch",
       "price": 299.99,
-      "status": "Pending"
+      "status": "Pending",
+      "id": "fd64"
     }
   ],
   "topProducts": [
@@ -69,13 +158,15 @@
       "name": "John Doe",
       "product": "Wireless Headphones",
       "price": 129.99,
-      "status": "Completed"
+      "status": "Completed",
+      "id": "78dd"
     },
     {
       "name": "Jane Smith",
       "product": "Smart Watch",
       "price": 299.99,
-      "status": "Pending"
+      "status": "Pending",
+      "id": "452a"
     }
   ],
   "users": [
