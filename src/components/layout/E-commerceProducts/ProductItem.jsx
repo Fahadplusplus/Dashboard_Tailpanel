@@ -9,9 +9,7 @@ function ProductItem({item}) {
                     <img src={item.link}
                       className="card-img-top product-img " />
 
-                    {/* <button className="menu-btn">
-                      <i className="bi bi-three-dots-vertical"></i>
-                    </button> */}
+                    
                   </div>
 
                   <div className="card-body">
