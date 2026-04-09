@@ -49,15 +49,15 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                         </NavLink>
                     </li>
 
-                    <li className="nav-item p-0  listitem rounded-2">
+                    {/* <li className="nav-item p-0  listitem rounded-2">
                         <NavLink to="/usermanagemennt"  className="nav-link active-class rounded-2 d-flex align-items-center">
                             <i className="bi bi-people me-2"></i>
 
                             {sidebarState !== "collapsed" && <span>User Management</span>}
                         </NavLink>
-                    </li>
+                    </li> */}
 
-                    <li className="nav-item p-0 listitem rounded-2" onClick={() => toggleMenu("Showcase")}>
+                    {/* <li className="nav-item p-0 listitem rounded-2" onClick={() => toggleMenu("Showcase")}>
 
                         <div  className="nav-link active-class rounded-2 d-flex align-items-center">
                             <i className="bi bi-star me-2"></i>
@@ -93,7 +93,7 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                                 </NavLink>
                             </li>
                         </ul>
-                    )}
+                    )} */}
                     <li className="nav-item p-0 listitem rounded-2" onClick={() => toggleMenu("E-Commerce")}>
 
                         <div className="nav-link active-class rounded-2 d-flex align-items-center">
@@ -122,7 +122,7 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                                     <span>Add Products</span>
                                 </NavLink>
                             </li>
-                             <li className="nav-item p-0 listitem rounded-2">
+                             {/* <li className="nav-item p-0 listitem rounded-2">
                                 <NavLink to="/einvoice" className="nav-link active-class rounded-2 d-flex align-items-center">
                                     <i className="bi bi-file-earmark-richtext me-2"></i>
                                     <span>Invoice</span>
@@ -139,10 +139,10 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                                     <i className="bi bi-shuffle me-2"></i>
                                     <span>Transactions</span>
                                 </NavLink>
-                            </li>
+                            </li> */}
                         </ul>
                     )}
-                    <li className="nav-item p-0 my-2 listitem rounded-2">
+                    {/* <li className="nav-item p-0 my-2 listitem rounded-2">
                         <NavLink to="/product" className="nav-link active-class rounded-2 d-flex align-items-center">
                             <i className="bi bi-box-seam me-2"></i>
                            {sidebarState !== "collapsed" && <span>Products</span>}
@@ -156,9 +156,9 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                             
                              {sidebarState !== "collapsed" && <span>Tables</span>}
                         </NavLink>
-                    </li>
+                    </li> */}
 
-                    <li className="nav-item p-0 my-2 listitem rounded-2">
+                    {/* <li className="nav-item p-0 my-2 listitem rounded-2">
                         <NavLink to="/forms" className="nav-link active-class rounded-2 d-flex align-items-center">
                             <i className="bi bi-file-check me-2"></i>
                             
@@ -209,7 +209,7 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                                 </NavLink>
                             </li>
                         </ul>
-                    )}
+                    )} */}
 
                     <li className="nav-item p-0 my-2 listitem rounded-2">
                         <NavLink to="/profile" className="nav-link active-class rounded-2 d-flex align-items-center">
@@ -219,16 +219,16 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                         </NavLink>
                     </li>
 
-                    <li className="nav-item p-0 my-2 listitem rounded-2">
+                    {/* <li className="nav-item p-0 my-2 listitem rounded-2">
                         <NavLink to="/setting" className="nav-link active-class rounded-2 d-flex align-items-center">
                             <i className="bi bi-gear me-2"></i>
                             {sidebarState !== "collapsed" && <span>Setting</span>}
                         </NavLink>
-                    </li>
+                    </li> */}
                 </ul>
 
             </div>
-            <div className="d-flex align-items-center px-3 pb-3">
+            <div className="d-flex align-items-center px-3 pt-3">
                 <div className="rounded-circle bg-primary text-white py-1 px-2 " >
                      {user?.username?.slice(0, 2).toUpperCase()}
                 </div>

@@ -37,9 +37,17 @@ const Dashboard = () => {
   };
   return (
     <>
-      <div className="content   ">
-          <h1>Dashboard Content</h1> 
-
+    <div className="ms-4 d-flex align-items-center">
+      <i className="bi bi-house "></i>
+      <i className=" ms-3"> &gt;</i>
+      <h6 className="ms-3 mt-2">Dashboard</h6>
+      
+    </div>
+    
+      <div className="content  ">
+        
+          <h2>Dashboard Overview</h2> 
+          <p>Welcome back! Here's what's happening with your business today.</p>
 
 
        

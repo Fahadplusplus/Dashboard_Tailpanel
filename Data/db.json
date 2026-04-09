@@ -1,107 +1,55 @@
 {
+  "anayticsData":[
+     {
+      "id": "1",
+      "cardTitle": "Total Users",
+     
+      "cardSubTitle": "15,350" ,
+      "cardText": "vs last month",
+      "percent": "21.1%",
+      "icon": "bi bi-people"
+    },
+    {
+      "id": "2",
+      "cardTitle": "Page Views",
+      "cardSubTitle": "85,900",
+      "cardText": "vs last month",
+      "percent": "15.3%",
+      "icon": "bi bi-eye"
+    },
+    {
+      "id": "3",
+      "cardTitle": "Avg. Session Duration",
+      "cardSubTitle": "3:42",
+      "cardText": "vs last month",
+      "percent": "4.2%",
+      "icon": "bi bi-alaram"
+    },
+    {
+      "id": "4",
+      "cardTitle": "Bounce Rate",
+      "extra2": "%",
+      "cardSubTitle": 35.8,
+      "cardText": "vs last month",
+      "percent": "8.7%",
+      "icon": "bi bi-arrow-down"
+    }
+  ],
   "productsData": [
     {
-      "id": "a456",
-      "link": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
-      "name": "Smart watch",
-      "category": "Electronics • SW-002",
-      "price": 100,
-      "stock": "Low Stock",
-      "quantity": 10,
-      "sold": 10
-    },
-    {
-      "id": "271f",
-      "link": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
-      "name": "smart watch",
-      "category": "electronic 007",
-      "price": "500",
-      "stock": "In Stock",
-      "quantity": "100",
-      "sold": "8"
-    },
-    {
-      "id": "b58b",
-      "link": "delete  * orders ",
-      "name": "aksjbdkj",
-      "category": "naskjdnjka",
-      "price": "87",
-      "stock": "In Stock",
-      "quantity": "78",
-      "sold": "98"
-    },
-    {
-      "id": "4baf",
-      "link": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop",
-      "name": "kknvsldk",
-      "category": "klsndlkf",
-      "price": "787",
-      "stock": "In Stock",
-      "quantity": "98",
-      "sold": "89"
-    },
-    {
-      "id": "211a",
-      "link": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop",
-      "name": "kknvsldk",
-      "category": "klsndlkf",
-      "price": "787",
-      "stock": "In Stock",
-      "quantity": "98",
-      "sold": "89"
-    },
-    {
-      "id": "2d7b",
-      "link": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
-      "name": "watch",
-      "category": "skhbasihd",
-      "price": "78",
-      "stock": "In Stock",
-      "quantity": "8",
-      "sold": "88"
-    },
-    {
-      "id": "7568",
-      "link": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
-      "name": "sfsd",
-      "category": "ascsad",
-      "price": "45",
-      "stock": "In Stock",
-      "quantity": "45",
-      "sold": "65"
-    },
-    {
-      "id": "7dba",
-      "link": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
-      "name": "smart watch",
-      "category": "sjnksjnd",
-      "price": "85",
-      "stock": "Low Stock",
-      "quantity": "85",
-      "sold": "85"
-    },
-    {
-      "id": "0729",
+      "id": "c07c",
       "link": "",
-      "name": "smart watch",
-      "category": "fahad",
+      "name": "Smart Watch",
+      "category": "electronic",
       "price": "100",
       "stock": "In Stock",
-      "quantity": "12",
-      "sold": "12"
-    },
-    {
-      "id": "8959",
-      "link": "",
-      "name": "fahad",
-      "category": "dahjajh",
-      "price": "74",
-      "stock": "In Stock",
-      "quantity": "74",
-      "sold": "74"
+      "quantity": "10",
+      "sold": "50",
+      "image": "https://res.cloudinary.com/dcbptp5nf/image/upload/v1775712863/szwgpdqklsp8249qsdi3.jpg"
     }
   ],
   "cardsData": [
+    
     {
       "id": "1",
       "cardTitle": "Total Revenue",

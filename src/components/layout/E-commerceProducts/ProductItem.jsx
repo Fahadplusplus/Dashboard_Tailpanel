@@ -6,7 +6,7 @@ function ProductItem({item}) {
      <div className="card product-card shadow-sm p-2 " >
 
                   <div className="position-relative rounded-0">
-                    <img src={item.link}
+                    <img src={item.image}
                       className="card-img-top product-img " />
 
                     

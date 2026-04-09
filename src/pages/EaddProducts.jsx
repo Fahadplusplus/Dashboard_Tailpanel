@@ -1,19 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios"
-import {} from 'react-toastify'
-import {useNavigate} from 'react-router-dom'
-import ImageKit from "imagekit-javascript";
-
-  const imagekit = new ImageKit({
-  publicKey: "public_ejS/utqw8kUNwY0rdt3ZAxGBGmo=",
-  urlEndpoint: "https://ik.imagekit.io/zxdvcni8p",
-    authenticationEndpoint: "http://localhost:3001/auth"
-
- 
-});
+import { } from 'react-toastify'
+import { useNavigate } from 'react-router-dom'
 
 
- function EaddProducts() {
+function EaddProducts() {
+  const [imageFile, setImageFile] = useState(null);
+  const [loading, setLoading] = useState(false);
+
 
   const navigate = useNavigate()
 
@@ -27,85 +21,130 @@ import ImageKit from "imagekit-javascript";
     quantity: "",
     sold: ""
   });
-   const handleFileChange = async (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
 
-    try {
-      const response = await imagekit.upload({
-        file,
-        fileName: file.name
-      });
 
-      console.log("Image uploaded:", response.url);
-      setProduct({ ...product, link: response.url });
-    } catch (err) {
-      console.error("Image upload failed:", err);
-    }
+  const handleImageChange = (e) => {
+    setImageFile(e.target.files[0]);
   };
+
+  const handleImageUpload = async (file) => {
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("upload_preset", "productimg");
+
+    const res = await fetch(
+      "https://api.cloudinary.com/v1_1/dcbptp5nf/image/upload",
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
+
+    const data = await res.json();
+     console.log("Cloudinary response:", data);
+
+    return data.secure_url;
+  };
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setProduct({ ...product, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-       axios.post("http://localhost:8000/productsData",
+    setLoading(true)
 
-          {
-            link: product.link,
-            name: product.name,
-            category: product.category,
-            price: product.price,
-            stock: product.stock,
-            quantity: product.quantity,
-            sold: product.sold
-            
-            
-          }
-        );
-           setProduct({
-        link: "",
-        name: "",
-        category: "",
-        price: "",
-        stock: "",
-        quantity: "",
-        sold: "",
-      });
+    let imageUrl = "";
 
-      
+    if (imageFile) {
+      imageUrl = await handleImageUpload(imageFile);
+    }
 
-       navigate("/eproduct");
+    const newProduct = {
+      ...product,
+      image: imageUrl,
+    };
+   
+     console.log("Sending to DB:", newProduct);
 
-      
+    await axios.post("http://localhost:8000/productsData", newProduct);
 
-    
+    setProduct({
+      link: "",
+      name: "",
+      category: "",
+      price: "",
+      stock: "",
+      quantity: "",
+      sold: "",
+    });
+
+    navigate("/eproduct");
+     
+    setLoading(false); 
   
-      
+
   };
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+
+  //      axios.post("http://localhost:8000/productsData",
+
+  //         {
+  //           link: product.link,
+  //           name: product.name,
+  //           category: product.category,
+  //           price: product.price,
+  //           stock: product.stock,
+  //           quantity: product.quantity,
+  //           sold: product.sold
 
 
-// const validate = () => {
-//   let result = true;
+  //         }
+  //       );
+  //          setProduct({
+  //       link: "",
+  //       name: "",
+  //       category: "",
+  //       price: "",
+  //       stock: "",
+  //       quantity: "",
+  //       sold: "",
+  //     });
 
-  
-//   if (!product.link.startsWith("https://")) {
-//    toast.error("Link must start with https://")
-//     result = false;
-//   }
 
-  
-//   if (/\s/.test(product.link)) {
-//    toast.error("Link can not have blank spaces")
-//     result = false;
-//   }
 
-//   return result;
-// };
+  //      navigate("/eproduct");
+
+
+
+
+
+
+  // };
+
+
+
+  // const validate = () => {
+  //   let result = true;
+
+
+  //   if (!product.link.startsWith("https://")) {
+  //    toast.error("Link must start with https://")
+  //     result = false;
+  //   }
+
+
+  //   if (/\s/.test(product.link)) {
+  //    toast.error("Link can not have blank spaces")
+  //     result = false;
+  //   }
+
+  //   return result;
+  // };
 
   return (
     <div className=" mt-5">
@@ -117,11 +156,11 @@ import ImageKit from "imagekit-javascript";
             type="file"
             className="form-control"
             name="link"
-          
-            onChange={handleFileChange}
+
+            onChange={handleImageChange}
             placeholder="https://..."
           />
-         
+
         </div>
 
         <div className="mb-3">
@@ -199,8 +238,22 @@ import ImageKit from "imagekit-javascript";
           </select>
         </div>
 
-        <button type="submit" className="btn btn-primary w-100">
+        {/* <button type="submit" className="btn btn-primary w-100">
           Add Product
+        </button> */}
+        <button
+          type="submit"
+          className="btn btn-primary w-100"
+          disabled={loading}
+        >
+          {loading ? (
+            <>
+              <span className="spinner-border spinner-border-sm me-2"></span>
+              Uploading...
+            </>
+          ) : (
+            "Add Product"
+          )}
         </button>
       </form>
     </div>

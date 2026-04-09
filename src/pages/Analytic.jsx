@@ -1,19 +1,26 @@
-import { useState } from "react"
-import Counter from "../components/layout/Counter";
+import Card from "../components/layout/analyticsCard/Card"
+
 
 
 const Analytic = () => {
-    const [color, setColor] = useState("gray")
+
   return (
     <>
-      <div className="w-100 h-100 " style={{backgroundColor: color}} >
-        <div>
-            <button onClick={() => setColor("red")}>red</button>
-            <button onClick={() => setColor("green")}>green</button>
-            <button onClick={() => setColor("blue")}>blue</button>
-        </div>
+     <div className="ms-4 d-flex align-items-center">
+      <i className="bi bi-house "></i>
+      <i className=" ms-2"> &gt;</i>
+      <h6 className="ms-2 mt-2">Analytics</h6>
+    </div>
+    <div className="content">
+
+        <h2>Analytics Dashboard</h2> 
+          <p>Detailed analytics and insights for your business performance.</p>
+      <div className="row">
+          <Card />
       </div>
-      <Counter />
+      
+    </div>
+      
     </>
   )
 }
