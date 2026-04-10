@@ -91,6 +91,10 @@ transition:0.3s;
   margin-bottom: 14px !important;
   
 }
+.Border {
+  border-style: dashed !important;
+}
+
 
 .active {
   

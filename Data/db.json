@@ -1,10 +1,24 @@
 {
-  "anayticsData":[
-     {
+  "tableData": [
+    {
+      "id": "1",
+      "country": "Pakistan",
+      "users": "Fahad",
+      "share": "55%",
+      "revenue": "100$"
+    },
+    {
+      "country": "India",
+      "users": "Fahad",
+      "share": "5%",
+      "revenue": "10$"
+    }
+  ],
+  "anayticsData": [
+    {
       "id": "1",
       "cardTitle": "Total Users",
-     
-      "cardSubTitle": "15,350" ,
+      "cardSubTitle": "15,350",
       "cardText": "vs last month",
       "percent": "21.1%",
       "icon": "bi bi-people"
@@ -23,7 +37,7 @@
       "cardSubTitle": "3:42",
       "cardText": "vs last month",
       "percent": "4.2%",
-      "icon": "bi bi-alaram"
+      "icon": "bi bi-clock"
     },
     {
       "id": "4",
@@ -37,19 +51,65 @@
   ],
   "productsData": [
     {
-      "id": "c07c",
-      "link": "",
-      "name": "Smart Watch",
-      "category": "electronic",
-      "price": "100",
+      "id": "9400",
+      "name": "EasyPick",
+      "category": "Bag",
+      "price": "200",
       "stock": "In Stock",
       "quantity": "10",
-      "sold": "50",
-      "image": "https://res.cloudinary.com/dcbptp5nf/image/upload/v1775712863/szwgpdqklsp8249qsdi3.jpg"
+      "sold": "2",
+      "sku": "ASD-526",
+      "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "image": "https://res.cloudinary.com/dcbptp5nf/image/upload/v1775819686/wcrkcsyvk64hc8ps1xp9.jpg"
+    },
+    {
+      "id": "459f",
+      "name": "dflkn",
+      "category": "jhvuhv",
+      "price": "45",
+      "stock": "In Stock",
+      "quantity": "4",
+      "sold": "1",
+      "sku": "FGH-455",
+      "description": "kjhvhjvjhvjvjh",
+      "image": "https://res.cloudinary.com/dcbptp5nf/image/upload/v1775820809/kn01hdcelxunqlcgubxh.jpg"
+    },
+    {
+      "id": "ba9a",
+      "name": "sdfdsf",
+      "category": "sddasd",
+      "price": "4",
+      "stock": "In Stock",
+      "quantity": "4",
+      "sold": "4",
+      "sku": "ASE-456",
+      "description": "dsdfsdfsdasda"
+    },
+    {
+      "id": "d570",
+      "name": "dfdfdffd",
+      "category": "sdssdf",
+      "price": "78",
+      "stock": "In Stock",
+      "quantity": "78",
+      "sold": "4",
+      "sku": "POI-789",
+      "description": "sdfsdfsdfsdfsdf"
+    },
+    {
+      "id": "ba2e",
+      "name": "gahj",
+      "category": "jhbjhb",
+      "price": "78",
+      "stock": "In Stock",
+      "quantity": "78",
+      "sold": "8",
+      "sku": "POI-098",
+      "description": "jhbjhbjnkjnjkn",
+      "image": "https://res.cloudinary.com/dcbptp5nf/image/upload/v1775825723/gozbzelq2bcgi5fm3ntn.jpg"
     }
   ],
   "cardsData": [
-    
     {
       "id": "1",
       "cardTitle": "Total Revenue",

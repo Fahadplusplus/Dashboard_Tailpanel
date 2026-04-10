@@ -158,14 +158,14 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                         </NavLink>
                     </li> */}
 
-                    {/* <li className="nav-item p-0 my-2 listitem rounded-2">
+                     <li className="nav-item p-0 my-2 listitem rounded-2">
                         <NavLink to="/forms" className="nav-link active-class rounded-2 d-flex align-items-center">
                             <i className="bi bi-file-check me-2"></i>
                             
                              {sidebarState !== "collapsed" && <span>Forms</span>}
                         </NavLink>
                     </li>
-
+{/*
                     <li className="nav-item p-0 my-2 listitem rounded-2">
                         <NavLink to="/calander" className="nav-link active-class rounded-2 d-flex align-items-center">
                             <i className="bi bi-calendar-date me-2"></i>
