@@ -28,50 +28,50 @@ function EaddProducts() {
   
 
 
- const handleImageChange = (e) => {
-  const file = e.target.files[0];
-  if (!file) return;
+//  const handleImageChange = (e) => {
+//   const file = e.target.files[0];
+//   if (!file) return;
 
-  let newErrors = {};
+//   let newErrors = {};
 
 
-  const fileName = file.name.toLowerCase();
-  const fileExt = fileName.includes(".")
-    ? fileName.split(".").pop()
-    : "";
+//   const fileName = file.name.toLowerCase();
+//   const fileExt = fileName.includes(".")
+//     ? fileName.split(".").pop()
+//     : "";
 
-  const validExtensions = ["jpg", "jpeg", "png", "gif"];
+//   const validExtensions = ["jpg", "jpeg", "png", "gif"];
 
  
-  if (
-    !file.type.startsWith("image/") &&
-    !validExtensions.includes(fileExt)
-  ) {
-    newErrors.image = "Only image files (JPG, PNG, GIF) are allowed";
-  }
+//   if (
+//     !file.type.startsWith("image/") &&
+//     !validExtensions.includes(fileExt)
+//   ) {
+//     newErrors.image = "Only image files (JPG, PNG, GIF) are allowed";
+//   }
   
 
   
-  if (file.size > 5 * 1024 * 1024) {
-    newErrors.image = "File must be less than 5MB";
-  }
+//   if (file.size > 5 * 1024 * 1024) {
+//     newErrors.image = "File must be less than 5MB";
+//   }
 
-  if (Object.keys(newErrors).length > 0) {
-    setError((prev) => ({
-      ...prev,
-      ...newErrors,
-    }));
-    return;
-  }
+//   if (Object.keys(newErrors).length > 0) {
+//     setError((prev) => ({
+//       ...prev,
+//       ...newErrors,
+//     }));
+//     return;
+//   }
 
-  setImageFile(file);
+//   setImageFile(file);
 
-  // clear error
-  setError((prev) => ({
-    ...prev,
-    image: "",
-  }));
-};
+//   // clear error
+//   setError((prev) => ({
+//     ...prev,
+//     image: "",
+//   }));
+// };
 
   const handleImageUpload = async (file) => {
     const formData = new FormData();
@@ -380,12 +380,12 @@ if (!product.price) {
           
             <div className="bg-white rounded shadow-sm p-4 mb-4 text-center">
               <h5 className="mb-3">Product Image</h5>
-              {/* <ImageUpload
+              <ImageUpload
                 setImageFile={setImageFile}
                 setError={setError}
-              /> */}
+              />
 
-              <input
+              {/* <input
                 type="file"
                  className={`form-control ${error.image ? "is-invalid" : ""} `}
                 onChange={handleImageChange}
@@ -396,7 +396,7 @@ if (!product.price) {
 
               <small className="text-muted d-block mt-2">
                 JPG, PNG, GIF (Max 5MB)
-              </small>
+              </small> */}
 
             </div>
 

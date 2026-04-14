@@ -11,7 +11,8 @@
       "country": "India",
       "users": "Fahad",
       "share": "5%",
-      "revenue": "10$"
+      "revenue": "10$",
+      "id": "aff7"
     }
   ],
   "anayticsData": [
@@ -74,28 +75,7 @@
       "description": "kjhvhjvjhvjvjh",
       "image": "https://res.cloudinary.com/dcbptp5nf/image/upload/v1775820809/kn01hdcelxunqlcgubxh.jpg"
     },
-    {
-      "id": "ba9a",
-      "name": "sdfdsf",
-      "category": "sddasd",
-      "price": "4",
-      "stock": "In Stock",
-      "quantity": "4",
-      "sold": "4",
-      "sku": "ASE-456",
-      "description": "dsdfsdfsdasda"
-    },
-    {
-      "id": "d570",
-      "name": "dfdfdffd",
-      "category": "sdssdf",
-      "price": "78",
-      "stock": "In Stock",
-      "quantity": "78",
-      "sold": "4",
-      "sku": "POI-789",
-      "description": "sdfsdfsdfsdfsdf"
-    },
+ 
     {
       "id": "ba2e",
       "name": "gahj",
@@ -107,7 +87,46 @@
       "sku": "POI-098",
       "description": "jhbjhbjnkjnjkn",
       "image": "https://res.cloudinary.com/dcbptp5nf/image/upload/v1775825723/gozbzelq2bcgi5fm3ntn.jpg"
+    },
+    {
+      "id": "2817",
+      "name": ";em;asm",
+      "category": "kldkslks",
+      "price": "4",
+      "stock": "In Stock",
+      "quantity": "4",
+      "sold": "4",
+      "sku": "PIU-123",
+      "description": "ksmdklnmaks",
+      "image": "https://res.cloudinary.com/dcbptp5nf/image/upload/v1775891012/auptfcdtem6ti2rguy8d.jpg"
     }
+  ],
+  "employcardData":[
+    {
+      "id":"1",
+      "totalUsers":"Total Users",
+      "icon": "bi bi-shield"
+
+    },
+     {
+      "id":"2",
+      "totalUsers":"Active",
+      "icon": "bi bi-shield"
+
+    },
+     {
+      "id":"3",
+      "totalUsers":"Pending",
+      "icon": "bi bi-shield"
+
+    },
+     {
+      "id":"4",
+      "totalUsers":"Admin",
+      "icon": "bi bi-shield"
+
+    }
+
   ],
   "cardsData": [
     {
@@ -192,5 +211,86 @@
       "password": "admin123",
       "confirmPassword": "admin123"
     }
-  ]
+  ],
+  "employs":[
+  {  "id":"1",
+    "fullname": "Ali Khan",
+    "email": "ali@gmail.com",
+    "role": "Admin",
+    "status": "Active",
+    "createdAt": "2026-04-14T10:30:00Z"
+  },
+  {
+    "id":"2",
+    "fullname": "Sara Ahmed",
+    "email": "sara@gmail.com",
+    "role": "User",
+    "status": "Pending",
+    "createdAt": "2026-04-14T10:30:00Z"
+  },
+  {
+    "id":"3",
+    "fullname": "Usman Tariq",
+    "email": "usman@gmail.com",
+    "role": "Developer",
+    "status": "Active",
+    "createdAt": "2026-04-14T10:30:00Z"
+  },
+  {
+    "id":"4",
+    "fullname": "Hina Malik",
+    "email": "hina@gmail.com",
+    "role": "Manager",
+    "status": "Active",
+    "createdAt": "2026-04-14T10:30:00Z"
+  },
+  {
+    "id":"5",
+    "fullname": "Bilal Raza",
+    "email": "bilal@gmail.com",
+    "role": "User",
+    "status": "Inactive",
+    "createdAt": "2026-04-14T10:30:00Z"
+  },
+  {
+    "id":"6",
+    "fullname": "Ayesha Noor",
+    "email": "ayesha@gmail.com",
+    "role": "Admin",
+    "status": "Active",
+    "createdAt": "2026-04-14T10:30:00Z"
+  },
+  {
+    "id":"7",
+    "fullname": "Zain Ali",
+    "email": "zain@gmail.com",
+    "role": "Developer",
+    "status": "Pending",
+    "createdAt": "2026-04-14T10:30:00Z"
+  },
+  {
+    "id":"8",
+    "fullname": "Fatima Zahra",
+    "email": "fatima@gmail.com",
+    "role": "Manager",
+    "status": "Active",
+    "createdAt": "2026-04-14T10:30:00Z"
+  },
+  {
+    "id":"9",
+    "fullname": "Hamza Siddiqui",
+    "email": "hamza@gmail.com",
+    "role": "User",
+    "status": "Active",
+    "createdAt": "2026-04-14T10:30:00Z"
+  },
+  {
+    "id":"10",
+    "fullname": "Mariam Khan",
+    "email": "mariam@gmail.com",
+    "role": "Developer",
+    "status": "Inactive",
+    "createdAt": "2026-04-14T10:30:00Z"
+  }
+]
 }

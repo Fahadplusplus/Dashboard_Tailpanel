@@ -10,7 +10,7 @@ export default function Topbar({ toggleSidebar }) {
     const {user} = useContext(UserContext)
    const navigate = useNavigate()
 
-  // const { toggleTheme } = useContext(ThemeContext);
+   const { toggleTheme } = useContext(ThemeContext);
    const logOut=()=>{
     setUser(null);
        localStorage.removeItem("authUser");
@@ -19,7 +19,7 @@ export default function Topbar({ toggleSidebar }) {
   }
 
   return (
-    <nav className="topbar  d-flex border-bottom  ">
+    <nav className="topbar  d-flex   ">
 
 
 
@@ -44,12 +44,12 @@ export default function Topbar({ toggleSidebar }) {
 
       </div>
       <div className="d-flex ms-auto  align-items-center">
-        {/* <div className="">
+         <div className="">
           <i onClick={toggleTheme} className="me-2 bi bi-brightness-high"  ></i>
-          <i className="bi bi-search d-lg-none search me-2"></i>
+          {/* <i className="bi bi-search d-lg-none search me-2"></i>
           <i className="bi bi-tv me-2"></i>
-          <i className="bi bi-bell me-2 "></i>
-        </div> */}
+          <i className="bi bi-bell me-2 "></i> */}
+        </div> 
 
         <div className="d-flex">
           <div className="rounded-circle bg-primary mx-2 py-1 px-2 text-white">

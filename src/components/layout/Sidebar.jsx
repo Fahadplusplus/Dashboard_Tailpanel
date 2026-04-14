@@ -13,9 +13,9 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
         );
     };
     return (
-        <aside className={`sidebar ${sidebarState} border-end `} >
+        <aside className={`sidebar ${sidebarState}  `} >
 
-            <div className="d-flex border-bottom justify-content-center  sidetop pt-3" >
+            <div className="d-flex justify-content-center  sidetop pt-3" >
                 <div className="logo  ">
                     <div className="d-flex align-items-center ps-4 ">
                         <div
@@ -35,36 +35,36 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
 
                     <li className="nav-item p-0 listitem rounded-2">
                         <NavLink to="/dashboard" className="nav-link active-class rounded-2  d-flex  align-items-center ">
-                            <i className="bi bi-speedometer2 me-2 "></i>
+                            <i className="bi bi-speedometer2 me-2  sidebar-text-icon"></i>
 
-                            {sidebarState !== "collapsed" && <span>Dashboard</span>}
+                            {sidebarState !== "collapsed" && <span className="sidebar-text-icon">Dashboard</span>}
                         </NavLink>
                     </li>
 
                     <li className="nav-item p-0  listitem rounded-2">
                         <NavLink to="/analytics" className="nav-link active-class rounded-2 d-flex   align-items-center ">
-                            <i className="bi bi-graph-up me-2"></i>
-                            {sidebarState !== "collapsed" && <span>Analytics</span>}
+                            <i className="bi bi-graph-up me-2 sidebar-text-icon"></i>
+                            {sidebarState !== "collapsed" && <span className="sidebar-text-icon">Analytics</span>}
 
                         </NavLink>
                     </li>
 
-                    {/* <li className="nav-item p-0  listitem rounded-2">
+                     <li className="nav-item p-0  listitem rounded-2">
                         <NavLink to="/usermanagemennt"  className="nav-link active-class rounded-2 d-flex align-items-center">
-                            <i className="bi bi-people me-2"></i>
+                            <i className="bi bi-people me-2 sidebar-text-icon"></i>
 
-                            {sidebarState !== "collapsed" && <span>User Management</span>}
+                            {sidebarState !== "collapsed" && <span className="sidebar-text-icon">User Management</span>}
                         </NavLink>
-                    </li> */}
+                    </li> 
 
-                    {/* <li className="nav-item p-0 listitem rounded-2" onClick={() => toggleMenu("Showcase")}>
+                    <li className="nav-item p-0 listitem rounded-2" onClick={() => toggleMenu("Showcase")}>
 
                         <div  className="nav-link active-class rounded-2 d-flex align-items-center">
-                            <i className="bi bi-star me-2"></i>
+                            <i className="bi bi-star me-2 sidebar-text-icon"></i>
 
                             {sidebarState !== "collapsed" && (
                                 <div className="d-flex w-100">
-                                    <span>Showcase</span>
+                                    <span className="sidebar-text-icon">Showcase</span>
                                     <i className={`bi bi-chevron-down ms-auto ${openMenu.includes("Showcase") ? "rotate" : "rotate2"}`}></i>
                                 </div>
                             )}
@@ -76,32 +76,32 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                         <ul className="submenu">
                             <li className="nav-item p-0 listitem rounded-2">
                                 <NavLink to="/showUiComponents" className="nav-link active-class rounded-2 d-flex align-items-center">
-                                    <i className="bi bi-stack me-2"></i>
-                                    <span>UI Components</span>
+                                    <i className="bi sidebar-text-icon bi-stack me-2 sidebar-text-icon"></i>
+                                    <span className="sidebar-text-icon">UI Components</span>
                                 </NavLink>
                             </li>
                             <li className="nav-item p-0 listitem rounded-2">
                                 <NavLink to="/showForms" className="nav-link active-class rounded-2 d-flex align-items-center">
-                                    <i className="bi bi-stack me-2"></i>
-                                    <span>Forms</span>
+                                    <i className="bi bi-stack me-2 sidebar-text-icon"></i>
+                                    <span className="sidebar-text-icon">Forms</span>
                                 </NavLink>
                             </li>
                             <li className="nav-item p-0 listitem rounded-2">
                                 <NavLink to="/showTables" className="nav-link active-class rounded-2 d-flex align-items-center">
-                                    <i className="bi bi-table me-2"></i>
-                                    <span>Tables</span>
+                                    <i className="bi bi-table me-2 sidebar-text-icon"></i>
+                                    <span className="sidebar-text-icon">Tables</span>
                                 </NavLink>
                             </li>
                         </ul>
-                    )} */}
+                    )}
                     <li className="nav-item p-0 listitem rounded-2" onClick={() => toggleMenu("E-Commerce")}>
 
                         <div className="nav-link active-class rounded-2 d-flex align-items-center">
-                            <i className="bi bi-cart me-2"></i>
+                            <i className="bi bi-cart me-2 sidebar-text-icon"></i>
 
                             {sidebarState !== "collapsed" && (
                                 <div className="d-flex w-100">
-                                    <span>E-Commerce</span>
+                                    <span className="sidebar-text-icon">E-Commerce</span>
                                     <i className={`bi bi-chevron-down ms-auto ${openMenu.includes("E-Commerce") ? "rotate" : "rotate2"}`}></i>
                                 </div>
                             )}
@@ -112,64 +112,64 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                         <ul className="submenu">
                               <li className="nav-item p-0 listitem rounded-2">
                                 <NavLink  to="/eproduct"  className="nav-link active-class rounded-2 d-flex align-items-center">
-                                    <i className="bi bi-box me-2"></i>
-                                    <span>Products</span>
+                                    <i className="bi bi-box me-2 sidebar-text-icon"></i>
+                                    <span className="sidebar-text-icon">Products</span>
                                 </NavLink>
                             </li>
                              <li className="nav-item p-0 listitem rounded-2">
                                 <NavLink to="/eaddProducts" className="nav-link active-class rounded-2 d-flex align-items-center">
-                                    <i className="bi bi-plus me-2"></i>
-                                    <span>Add Products</span>
+                                    <i className="bi bi-plus me-2 sidebar-text-icon"></i>
+                                    <span className="sidebar-text-icon">Add Products</span>
                                 </NavLink>
                             </li>
-                             {/* <li className="nav-item p-0 listitem rounded-2">
+                             <li className="nav-item p-0 listitem rounded-2">
                                 <NavLink to="/einvoice" className="nav-link active-class rounded-2 d-flex align-items-center">
-                                    <i className="bi bi-file-earmark-richtext me-2"></i>
-                                    <span>Invoice</span>
+                                    <i className="bi bi-file-earmark-richtext me-2 sidebar-text-icon"></i>
+                                    <span className="sidebar-text-icon">Invoice</span>
                                 </NavLink>
                             </li>
                              <li className="nav-item p-0 listitem rounded-2">
                                 <NavLink to="/ecreateInvoice" className="nav-link active-class rounded-2 d-flex align-items-center">
-                                    <i className="bi bi-file-earmark-richtext me-2"></i>
-                                    <span>Create Invoice</span>
+                                    <i className="bi bi-file-earmark-richtext me-2 sidebar-text-icon"></i>
+                                    <span className="sidebar-text-icon">Create Invoice</span>
                                 </NavLink>
                             </li>
                              <li className="nav-item p-0 listitem rounded-2">
                                 <NavLink to="/etransaction" className="nav-link active-class rounded-2 d-flex align-items-center">
-                                    <i className="bi bi-shuffle me-2"></i>
-                                    <span>Transactions</span>
+                                    <i className="bi bi-shuffle me-2 sidebar-text-icon"></i>
+                                    <span className="sidebar-text-icon">Transactions</span>
                                 </NavLink>
-                            </li> */}
+                            </li>
                         </ul>
                     )}
-                    {/* <li className="nav-item p-0 my-2 listitem rounded-2">
+                    <li className="nav-item p-0 my-2 listitem rounded-2">
                         <NavLink to="/product" className="nav-link active-class rounded-2 d-flex align-items-center">
-                            <i className="bi bi-box-seam me-2"></i>
-                           {sidebarState !== "collapsed" && <span>Products</span>}
+                            <i className="bi bi-box-seam me-2 sidebar-text-icon"></i>
+                           {sidebarState !== "collapsed" && <span className="sidebar-text-icon">Products</span>}
                         </NavLink>
                     </li>
 
                     <li className="nav-item p-0 my-2 listitem rounded-2">
                         <NavLink to="/tables" className="nav-link active-class rounded-2 d-flex align-items-center">
-                            <i className="bi bi-table me-2"></i>
+                            <i className="bi bi-table me-2 sidebar-text-icon"></i>
                             
                             
-                             {sidebarState !== "collapsed" && <span>Tables</span>}
+                             {sidebarState !== "collapsed" && <span className="sidebar-text-icon">Tables</span>}
                         </NavLink>
-                    </li> */}
+                    </li>
 
                      <li className="nav-item p-0 my-2 listitem rounded-2">
                         <NavLink to="/forms" className="nav-link active-class rounded-2 d-flex align-items-center">
-                            <i className="bi bi-file-check me-2"></i>
+                            <i className="bi bi-file-check me-2 sidebar-text-icon"></i>
                             
-                             {sidebarState !== "collapsed" && <span>Forms</span>}
+                             {sidebarState !== "collapsed" && <span className="sidebar-text-icon">Forms</span>}
                         </NavLink>
                     </li>
-{/*
+
                     <li className="nav-item p-0 my-2 listitem rounded-2">
                         <NavLink to="/calander" className="nav-link active-class rounded-2 d-flex align-items-center">
-                            <i className="bi bi-calendar-date me-2"></i>
-                            {sidebarState !== "collapsed" && <span>Calendar</span>}
+                            <i className="bi bi-calendar-date me-2 sidebar-text-icon"></i>
+                            {sidebarState !== "collapsed" && <span className="sidebar-text-icon">Calendar</span>}
                         </NavLink>
                     </li>
 
@@ -177,11 +177,11 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                     <li className="nav-item p-0 listitem rounded-2" onClick={() => toggleMenu("Pages")}>
 
                         <div className="nav-link active-class rounded-2 d-flex align-items-center">
-                            <i className="bi bi-cart me-2"></i>
+                            <i className="bi bi-cart me-2 sidebar-text-icon"></i>
 
                             {sidebarState !== "collapsed" && (
                                 <div className="d-flex w-100">
-                                    <span>Pages</span>
+                                    <span className="sidebar-text-icon">Pages</span>
                                     <i className={`bi bi-chevron-down ms-auto ${openMenu.includes("Pages") ? "rotate" : "rotate2"}`}></i>
                                 </div>
                             )}
@@ -192,43 +192,43 @@ export default function Sidebar({ sidebarState, toggleSidebar }) {
                         <ul className="submenu">
                           <li className="nav-item p-0 listitem rounded-2">
                                 <NavLink to="/filemanager" className="nav-link active-class rounded-2 d-flex align-items-center">
-                                    <i className="bi bi-folder me-2"></i>
-                                    <span>File Manager</span>
+                                    <i className="bi bi-folder me-2 sidebar-text-icon"></i>
+                                    <span className="sidebar-text-icon">File Manager</span>
                                 </NavLink>
                             </li>
                              <li className="nav-item p-0 listitem rounded-2">
                                 <NavLink to="/pricingtable" className="nav-link active-class rounded-2 d-flex align-items-center">
-                                    <i className="bi bi-currency-dollar me-2"></i>
-                                    <span>Pricing Table</span>
+                                    <i className="bi bi-currency-dollar me-2 sidebar-text-icon"></i>
+                                    <span className="sidebar-text-icon">Pricing Table</span>
                                 </NavLink>
                             </li>
                              <li className="nav-item p-0 listitem rounded-2">
                                 <NavLink to="/faqs" className="nav-link active-class rounded-2 d-flex align-items-center">
-                                    <i className="bi bi-question-circle me-2"></i>
-                                    <span>FAQ</span>
+                                    <i className="bi bi-question-circle me-2 sidebar-text-icon"></i>
+                                    <span className="sidebar-text-icon">FAQ</span>
                                 </NavLink>
                             </li>
                         </ul>
-                    )} */}
+                    )} 
 
                     <li className="nav-item p-0 my-2 listitem rounded-2">
                         <NavLink to="/profile" className="nav-link active-class rounded-2 d-flex align-items-center">
-                            <i className="bi bi-person-fill-gear me-2"></i>
+                            <i className="bi bi-person-fill-gear me-2 sidebar-text-icon"></i>
                             
-                             {sidebarState !== "collapsed" && <span>Profile</span>}
+                             {sidebarState !== "collapsed" && <span className="sidebar-text-icon">Profile</span>}
                         </NavLink>
                     </li>
 
-                    {/* <li className="nav-item p-0 my-2 listitem rounded-2">
+                    <li className="nav-item p-0 my-2 listitem rounded-2">
                         <NavLink to="/setting" className="nav-link active-class rounded-2 d-flex align-items-center">
-                            <i className="bi bi-gear me-2"></i>
-                            {sidebarState !== "collapsed" && <span>Setting</span>}
+                            <i className="bi bi-gear me-2 sidebar-text-icon"></i>
+                            {sidebarState !== "collapsed" && <span className="sidebar-text-icon">Setting</span>}
                         </NavLink>
-                    </li> */}
+                    </li>
                 </ul>
 
             </div>
-            <div className="d-flex align-items-center px-3 pt-3">
+            <div className="d-flex align-items-center px-3 pt-3 sideEnd">
                 <div className="rounded-circle bg-primary text-white py-1 px-2 " >
                      {user?.username?.slice(0, 2).toUpperCase()}
                 </div>

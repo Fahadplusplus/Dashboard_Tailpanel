@@ -5,36 +5,52 @@ import TopProductCard from "../components/layout/TopProductCard";
 import Card from "../components/layout/dashboardcard/Card";
 
 
+
 const Dashboard = () => {
  
 
   const lineChartOptions = {
-    title: { text: "Sales" },
+      chart: { backgroundColor: "var(--chart-bg)" ,
+        borderRadius: 12
+       },
+   title: {
+      text:"Sales",
+    style: { color:"var(--text)" }
+  },
     xAxis: {
-      categories: ["Jan", "Feb", "Mar", "Apr"]
+      categories: ["Jan", "Feb", "Mar", "Apr","May" ] , labels: { style: { color: "var(--text)" } }
     },
+    
     series: [
       {
         name: "Sales",
-        data: [10, 20, 30, 40]
+         style: { color:"var(--text)" },
+        data: [5, 30, 40, 20,10]
       }
     ]
   };
+  
 
 
   const barChartOptions = {
-    chart: { type: "bar" },
-    title: { text: "Users" },
+    chart: { type: "bar", backgroundColor: "var(--chart-bg)" ,  borderRadius: 12 },
+    title: {
+      text:"Users",
+    style: { color: "var(--text)" }
+  },
+    // title: { text: "Users" , style: { color: "#fff" },
     xAxis: {
-      categories: ["Week 1", "Week 2", "Week 3", "Week 4"]
+      categories: ["Week 1", "Week 2", "Week 3", "Week 4"] , labels: { style: { color: "var(--text)" } }
     },
     series: [
       {
         name: "Users",
         data: [5, 15, 25, 100]
+   
       }
     ]
   };
+ 
   return (
     <>
     <div className="ms-4 d-flex align-items-center">
@@ -62,12 +78,12 @@ const Dashboard = () => {
           <div className="row g-3">
             <div className="col-12 col-md-6">
               <div className="shadow-sm  ">
-                <Highchart options={lineChartOptions} />
+                <Highchart className="bg-black" options={lineChartOptions} />
               </div>
 
             </div>
             <div className="col-12 col-md-6">
-              <div className="shadow-sm">
+              <div className="shadow-sm ">
                 <Highchart options={barChartOptions} />
               </div>
             </div>

@@ -13,11 +13,11 @@ function CardItem({ item }) {
     }
     return (
         <>
-            <div className="card rounded-4  border-0 shadow-sm   ">
-                <div className="card-body d-flex d-flex ">
+            <div className=" Dash-card">
+                <div className="d-flex ">
                     <div>
-                        <h6 className="card-title " style={{ fontSize: "14px" }}>{item.cardTitle}</h6>
-                        <h2 className="card-subtitle my-2 fw-bold" style={{ letterSpacing: "2px", fontSize: "28px" }} >{item.extra} {item.cardSubTitle} {item.extra2}</h2>
+                        <h6 className=" " style={{ fontSize: "14px" }}>{item.cardTitle}</h6>
+                        <h2 className=" my-2 fw-bold" style={{ letterSpacing: "2px", fontSize: "28px" }} >{item.extra} {item.cardSubTitle} {item.extra2}</h2>
 
                         <span className="d-flex">
                             <div className="d-flex btn m-0 p-0 px-2 justify-content-center" style={{ fontSize: "14px", borderRadius: "10px",backgroundColor:bgColor }}>
