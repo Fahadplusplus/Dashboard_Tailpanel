@@ -12,9 +12,7 @@ function Table() {
           const res = await axios.get("http://localhost:8000/tableData")
 
           setTable(res.data)
-          console.log("workig");
           
-          console.log(res.data);
           
 
         }

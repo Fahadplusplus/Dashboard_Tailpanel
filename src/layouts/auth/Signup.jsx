@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState,useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { GoogleLogin } from "@react-oauth/google"
+import { jwtDecode } from "jwt-decode"
+import UserContext from '../../context/userContext'
 
 
 
@@ -13,6 +16,7 @@ function Signup() {
   const [confirmPassword, setConfirmPassword] = useState("")
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+   const { setUser } = useContext(UserContext)
 
   const navigate = useNavigate()
 
@@ -26,7 +30,7 @@ function Signup() {
         );
 
         if (existingUser.data.length > 0) {
-          toast.error("User already exists ❌");
+          toast.error("User already exists ");
           return;
         }
            const existingUsername = await axios.get(
@@ -189,13 +193,22 @@ if (hasNumbers.test(username)) {
 
 
             <div className="d-grid gap-2 d-flex justify-content-between mt-2">
-              <button className="btn btn-outline-secondary social-btn w-100">
-                <i className="bi bi-google text-black me-2"></i> Google
-              </button>
+                <GoogleLogin
+                            onSuccess={(res) => {
+                                const decoded = jwtDecode(res.credential);
 
-              <button className="btn btn-outline-secondary social-btn w-100">
-                <i className="bi bi-github  me-2"></i> GitHub
-              </button>
+                                const user = {
+                                    username: decoded.name,
+                                    email: decoded.email,
+                                    picture: decoded.picture,
+                                };
+
+                                localStorage.setItem("authUser", JSON.stringify(user));
+                                setUser(user);
+                                navigate("/dashboard");
+                            }}
+                            onError={() => console.log("Login Failed")}
+                        />
             </div>
 
           </div>

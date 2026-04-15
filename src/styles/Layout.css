@@ -18,6 +18,8 @@
      --border: rgba(0, 0, 0, 0.1);
      --chart-bg: #ffffff;
   --chart-text: #222;
+  --hover-bg:#c4bebe;
+  --t--head:#ffff;
 
 
 }
@@ -38,6 +40,8 @@
      --border: rgba(255, 255, 255, 0.1);
        --chart-bg: #1f293b;
   --chart-text: #fff;
+  --hover-bg:#d4d4d418;
+  --t--head:#d4d4d418;
 
 }
 .sidebar-text-icon{
@@ -158,6 +162,15 @@ transition:0.3s;
   
  
 }
+.global{
+  border: 1px solid var(--border);
+   background-color: var(--chart-bg);
+   padding: 10px;
+   border-radius: 10px;
+   color: var(--text);
+   
+
+}
 .sidebarscroll{
   height: 87vh;
   overflow-y: auto;
@@ -230,28 +243,81 @@ transition:0.3s;
  
 
 }
-.tablediv{
-  border:1px solid var(--border)
-
+.table-wrapper {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08);
+    overflow-x: auto;
 }
-.tableWrap{
-    border: 1px solid var(--border);
-  padding: 40px 10px 10px 10px;
-  background-color: var(--user-card);
-  border-radius: 10px;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 
+.custom-table {
+  width: 100%;
+
+  color: var(--text);
+
+  
+}
+
+ thead {
+  background: var(--t--head);
+  
+}
+
+.custom-table th {
+  text-align: left;
+  padding: 12px 14px;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+.custom-table td {
+  padding: 12px 14px;
+  font-size: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.custom-table tbody tr:hover {
+  background: var(--hover-bg);
+  
+}
+
+/* .custom-table tbody tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.02);
+} */
+
+/* [data-theme="dark"] .custom-table tbody tr:nth-child(even) {
+  background: rgba(228, 29, 29, 0.03);
+} */
+
+.status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status.active {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+.status.pending {
+  background: rgba(250, 204, 21, 0.15);
+  color: #eab308;
+}
+
+.status.inactive {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
 }
 .userCard{
     background-color: var(--user-card);
   border:1px solid var(--border);
 }
-table{
-      
-  text-align:start ;
-  width: 100vh;
-  
-}
+
 
 
 

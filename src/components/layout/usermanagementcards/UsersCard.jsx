@@ -1,38 +1,30 @@
-import React from 'react'
-import { useState,useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 import UserCarditem from './UserCarditem';
 
-function UsersCard() {
-     const [cards, setCards] = useState([])
-    useEffect(()=>{
-        const fetchCards= async  ()=>{
-            try{
-                  const res = await axios.get("http://localhost:8000/employcardData");
-                  setCards(res.data)
-                
-                  
-            }
-            catch(e){
-                console.error(e)
-            }
-        };
-        fetchCards()
-    },[]) 
+const cardConfig = [
+  { id: 1, label: "Total Users",    icon: "bi bi-people-fill",       valueKey: "total"    },
+  { id: 2, label: "Active Users",   icon: "bi bi-person-check-fill", valueKey: "active"   },
+  { id: 3, label: "Pending Users",  icon: "bi bi-hourglass-split",   valueKey: "pending"  },
+  { id: 4, label: "Inactive Users", icon: "bi bi-person-x-fill",     valueKey: "inactive" },
+];
+
+function UsersCard({ users = [] }) { // ← receive users, no useEffect/axios
+  const stats = {
+    total:    users.length,
+    active:   users.filter(e => e.status === "Active").length,
+    pending:  users.filter(e => e.status === "Pending").length,
+    inactive: users.filter(e => e.status === "Inactive").length,
+  };
 
   return (
-    <>  
-          {cards.map((item) => (
-            <div className="col-12 col-md-6 col-xxl-3 g-3" key={item.id}>
-              <UserCarditem
-                 item= {item}
-              />
-            </div>
-          ))}
-    </> 
-
-   
-  )
+    <>
+      {cardConfig.map((ele) => (
+        <div className="col-12 col-md-6 col-xxl-3 g-3" key={ele.id}>
+          <UserCarditem item={ele} value={stats[ele.valueKey]} />
+        </div>
+      ))}
+    </>
+  );
 }
 
-export default UsersCard
+export default UsersCard;
