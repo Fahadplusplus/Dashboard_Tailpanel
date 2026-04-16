@@ -4,7 +4,7 @@ const OrderItem = ({ order }) => {
       <div className="d-flex align-items-center mb-3">
         <div>
           <p className="m-0 fw-bold">{order.name}</p>
-          <small className="text-secondary">{order.product}</small>
+          <small className="">{order.product}</small>
         </div>
 
         <div className="ms-auto text-end">

@@ -10,11 +10,13 @@ function UserTableItem({ item }) {
                 <td>{item.email}</td>
                 <td>{item.role}</td>
                 <td>
-                <span className={`status ${item.status.toLowerCase()}`}>
-                                                {item.status}
-                </span>
+                <span className={`status ${item.status.toLowerCase()}`}> {item.status}</span>
                 </td>
-                  {/* <td className='text-center text-white'><i className='bi bi-star bg-danger p-2 rounded'></i> <i className='bi bi-0-circle ms-2 bg-primary p-2 rounded'></i></td>*/}
+                <td>{item.createdAt}</td>
+                <td className=' '>
+                     <i className='bi bi-pencil-square p-2 rounded  text-white userEdit'></i>
+                     <i className='bi bi-trash ms-2  p-2 rounded  text-white delEdit'></i>
+                </td>
         </tr> 
 
                 </>

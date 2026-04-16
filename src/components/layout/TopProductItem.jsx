@@ -6,10 +6,10 @@ function TopProductItem({product}) {
       <div className="d-flex align-items-center mb-3">
         <div>
           <p className="m-0 fw-bold">{product.name}</p>
-          <small className="text-secondary">{product.product}</small>
+          <small className="">{product.product}</small>
         </div>
 
-        <div className="ms-auto text-end">
+        <div className="ms-auto ">
           <p className="m-0 fw-bold">${product.price}</p>
           <span
             className={`badge ${

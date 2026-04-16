@@ -22,8 +22,8 @@ function TopProductCard() {
     fetchProducts();
   }, []);
   return (
-   <div className="card shadow-sm border-0">
-      <div className="card-body">
+   <div className="Order">
+      <div className="">
         <h5 className="mb-4">Recent Orders</h5>
 
         {loading ? (

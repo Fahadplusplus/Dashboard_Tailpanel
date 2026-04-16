@@ -11,6 +11,8 @@ function UserTable({ users = [] }) { // ← receive users, no useEffect/axios
           <th>Email</th>
           <th>Role</th>
           <th>Status</th>
+          <th className=''>Action</th>
+           <th>Created At</th>
         </tr>
       </thead>
       <tbody>

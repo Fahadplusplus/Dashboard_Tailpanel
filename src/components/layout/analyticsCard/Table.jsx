@@ -28,17 +28,17 @@ function Table() {
 
   return (
     <>
-    <div className="bg-white rounded-3 shadow-sm p-3">
+    <div className="Order rounded-3  p-3">
     
-    <div className="border my-3 overflow-auto">
+    <div className=" my-3 overflow-auto">
        
-        <table className="table table-hover mb-0">
-          <thead className="table-light">
+        <table className=" mb-0">
+          <thead className="">
             <tr className='text-center'>
-              <th scope="col" className='text-start'>Country</th>
+              <th scope="col" className=''>Country</th>
               <th scope="col">Users</th>
               <th scope="col">Share</th>
-              <th scope="col" className='text-end'>Revenue</th>
+              <th scope="col" className=''>Revenue</th>
             
             </tr>
           </thead>
