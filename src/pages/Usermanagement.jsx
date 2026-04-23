@@ -86,7 +86,8 @@ export default function Usermanagement() {
 
 
         </div> */}
-        <DataTable
+        <div className='test'>
+             <DataTable
         className='mytestTable'
           data={users}
           columns={[
@@ -99,6 +100,8 @@ export default function Usermanagement() {
 
           ]}
         />
+        </div>
+     
       </div>
 
       <AddEmployeeModal

@@ -223,7 +223,7 @@ if (!product.price) {
 
   return (
 
-    <div className=" mt-4">
+    <div className="Order mt-4">
       <h2 className="mb-4 fw-bold">Add New Product</h2>
 
       <form onSubmit={handleSubmit}>
@@ -233,15 +233,16 @@ if (!product.price) {
           <div className="col-lg-8">
 
 
-            <div className="bg-white rounded shadow-sm p-4 mb-4">
+            <div className="Order p-4 mb-4">
               <h5 className="mb-3">Product Information</h5>
 
               <div className="mb-3">
                 <label className="form-label">Product Name *</label>
                 <input
                   type="text"
-                  className={`form-control ${error.name ? "is-invalid" : ""}`}
+                  className={`form-control ${error.name ? "is-invalid" : ""} input-field`}
                   name="name"
+                  placeholder="Name"
                   value={product.name}
                   onChange={handleChange}
                 />
@@ -256,7 +257,7 @@ if (!product.price) {
                   <label className="form-label">SKU *</label>
                   <input
                     type="text"
-                    className={`form-control ${error.sku ? "is-invalid" : ""} `}
+                    className={`form-control ${error.sku ? "is-invalid" : ""} input-field `}
                     name="sku"
                     value={product.sku}
                     onChange={handleChange}
@@ -272,7 +273,7 @@ if (!product.price) {
                   <label className="form-label">Category *</label>
                   <input
                     type="text"
-                     className={`form-control ${error.category ? "is-invalid" : ""} `}
+                     className={`form-control ${error.category ? "is-invalid" : ""} input-field `}
                     name="category"
                     value={product.category}
                     onChange={handleChange}
@@ -289,7 +290,7 @@ if (!product.price) {
               <div className="mb-3">
                 <label className="form-label">Description</label>
                 <textarea
-                  className={`form-control ${error.description ? "is-invalid" : ""} `}
+                  className={`form-control ${error.description ? "is-invalid" : ""} input-field `}
                   rows="3"
                   name="description"
                   value={product.description}
@@ -304,7 +305,7 @@ if (!product.price) {
             </div>
 
             
-            <div className="bg-white rounded shadow-sm p-4">
+            <div className="Order p-4">
               <h5 className="mb-3">Pricing & Inventory</h5>
 
               <div className="row">
@@ -312,7 +313,7 @@ if (!product.price) {
                   <label className="form-label">Price *</label>
                   <input
                     type="number"
-                     className={`form-control ${error.price ? "is-invalid" : ""} `}
+                     className={`form-control ${error.price ? "is-invalid" : ""} input-field  `}
                     name="price"
                     value={product.price}
                     onChange={handleChange}
@@ -328,7 +329,8 @@ if (!product.price) {
                   <label className="form-label">Stock Quantity *</label>
                   <input
                     type="number"
-                    className={`form-control ${error.quantity ? "is-invalid" : ""} `}
+                    className={`form-control ${error.quantity ? "is-invalid" : ""} input-field `}
+                    
                     name="quantity"
                     value={product.quantity}
                     onChange={handleChange}
@@ -344,8 +346,9 @@ if (!product.price) {
                   <label className="form-label">Sold</label>
                   <input
                     type="number"
-                    className={`form-control ${error.sold ? "is-invalid" : ""} `}
+                    className={`form-control ${error.sold ? "is-invalid" : ""} input-field `}
                     name="sold"
+                    placeholder="0"
                     value={product.sold}
                     onChange={handleChange}
                   />
@@ -358,7 +361,8 @@ if (!product.price) {
                 <div className="col-md-6 mb-3">
                   <label className="form-label">Stock Status</label>
                   <select
-                    className="form-select"
+                    className="form-select input-field  "
+                    
                     name="stock"
                     value={product.stock}
                     onChange={handleChange}
@@ -378,7 +382,7 @@ if (!product.price) {
           <div className="col-lg-4">
 
           
-            <div className="bg-white rounded shadow-sm p-4 mb-4 text-center">
+            <div className="Order p-4 mb-4 text-center">
               <h5 className="mb-3">Product Image</h5>
               <ImageUpload
                 setImageFile={setImageFile}
@@ -401,7 +405,7 @@ if (!product.price) {
             </div>
 
             {/* Actions */}
-            <div className="bg-white rounded shadow-sm p-4">
+            <div className="Order p-4">
               <h5 className="mb-3">Actions</h5>
 
               <button

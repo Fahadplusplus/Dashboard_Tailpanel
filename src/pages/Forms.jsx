@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { EmployData } from './EmployData';
+import ImageUpload from '../components/layout/ImageUpload';
 
 export default function Forms() {
 
@@ -56,14 +57,211 @@ export default function Forms() {
 
   return (
     <>
-      <div>Forms</div>
-      <button onClick={handleAdd} className="btn btn-primary mb-2">
+     <div className="Order mt-4">
+      <h2 className="mb-4 fw-bold">Add New Product</h2>
+
+      <form onSubmit={handleSubmit}>
+        <div className="row g-4">
+
+
+          <div className="col-lg-8">
+
+
+            <div className="Order p-4 mb-4">
+              <h5 className="mb-3">Product Information</h5>
+
+              <div className="mb-3">
+                <label className="form-label">Product Name *</label>
+                <input
+                  type="text"
+                  className={`form-control  input-field`}
+                  name="name"
+                  placeholder="Name"
+                 
+                />
+
+               
+              </div>
+
+              <div className="row">
+                <div className="col-md-6 mb-3">
+                  <label className="form-label">SKU *</label>
+                  <input
+                    type="text"
+                    className={`form-control  input-field `}
+                    name="sku"
+                
+                    placeholder="PRD-001"
+                  />
+               
+
+                </div>
+
+                <div className="col-md-6 mb-3">
+                  <label className="form-label">Category *</label>
+                  <input
+                    type="text"
+                     className={`form-control  input-field `}
+                    name="category"
+                   
+                    placeholder="Electronics"
+                  />
+                   
+                   
+
+                </div>
+              </div>
+
+              <div className="mb-3">
+                <label className="form-label">Description</label>
+                <textarea
+                  className={`form-control  input-field `}
+                  rows="3"
+                  name="description"
+                 
+                  placeholder="Enter product description"
+                />
+              
+
+              </div>
+            </div>
+
+            
+            <div className="Order p-4">
+              <h5 className="mb-3">Pricing & Inventory</h5>
+
+              <div className="row">
+                <div className="col-md-6 mb-3">
+                  <label className="form-label">Price *</label>
+                  <input
+                    type="number"
+                     className={`form-control input-field  `}
+                    name="price"
+                   
+                    placeholder="$ 0.00"
+                  />
+                
+
+                </div>
+
+                <div className="col-md-6 mb-3">
+                  <label className="form-label">Stock Quantity *</label>
+                  <input
+                    type="number"
+                    className={`form-control input-field `}
+                    
+                    name="quantity"
+                  
+                    placeholder="0"
+                  />
+                   
+                  <div className="invalid-feedback"></div>
+              
+
+                </div>
+
+                <div className="col-md-6 mb-3">
+                  <label className="form-label">Sold</label>
+                  <input
+                    type="number"
+                    className={`form-control input-field `}
+                    name="sold"
+                    placeholder="0"
+                    
+                    
+                  />
+                   
+                  <div className="invalid-feedback"></div>
+                
+
+                </div>
+
+                <div className="col-md-6 mb-3">
+                  <label className="form-label">Stock Status</label>
+                  <select
+                    className="form-select input-field  "
+                    
+                    name="stock"
+                   
+                  >
+                    <option value="">Select stock status</option>
+                    <option value="In Stock">In Stock</option>
+                    <option value="Low Stock">Low Stock</option>
+                    <option value="Out of Stock">Out of Stock</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        
+          <div className="col-lg-4">
+
+          
+            <div className="Order p-4 mb-4 text-center">
+              <h5 className="mb-3">Product Image</h5>
+              <ImageUpload
+                
+              />
+
+              {/* <input
+                type="file"
+                 className={`form-control ${error.image ? "is-invalid" : ""} `}
+                onChange={handleImageChange}
+              />
+               {error.image && (
+                  <div className="invalid-feedback">{error.image}</div>
+                )}
+
+              <small className="text-muted d-block mt-2">
+                JPG, PNG, GIF (Max 5MB)
+              </small> */}
+
+            </div>
+
+            {/* Actions */}
+            <div className="Order p-4">
+              <h5 className="mb-3">Actions</h5>
+
+              <button
+                type="submit"
+                className="btn btn-primary w-100 mb-2"
+               
+              >
+                
+                  "Add Product"
+                
+              </button>
+
+
+              <button
+                type="button"
+                className="btn btn-outline-secondary w-100"
+                
+              >
+                Cancel
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </form>
+    
+ 
+    </div>
+      <div className='mt-3 d-flex justify-content-between'>
+        <p></p>
+          <button onClick={handleAdd} className="btn btn-primary mb-2">
         Add User
       </button>
+      </div>
+    
 
-      <div className="border my-3 overflow-auto">
-        <table className="table table-hover mb-0">
-          <thead className="table-light">
+      <div className="Order rounded-0 my-3 overflow-auto">
+        <table className="Order border-1  mb-0">
+          <thead className="">
             <tr className=''>
               <th scope="col">#</th>
               <th scope="col">First Name</th>
@@ -90,8 +288,9 @@ export default function Forms() {
         </table>
       </div>
       {showModal && (
+        
         <div className="modal-overlay " >
-          <div className="modal-box " style={{ width: "400px", height: "380px" }}>
+          <div className="modal-box " >
             <div className='d-flex mb-3' >
               <h3>{editIndex !== null ? "Edit User" : "Add User"}</h3>
               <i className='bi bi-x fs-3 ms-auto text-white rounded-1 px-1 p-0 py-0 bg-danger'  type="button" onClick={() => setShowModal(false)}>

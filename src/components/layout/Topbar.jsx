@@ -1,22 +1,13 @@
 import { useContext } from "react";
 
 import { ThemeContext } from "../../context/theme-context";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import UserContext from "../../context/userContext";
 
 
 export default function Topbar({ toggleSidebar }) {
-  const {setUser} = useContext(UserContext)
-    const {user} = useContext(UserContext)
-   const navigate = useNavigate()
+  const {user} = useContext(UserContext)
 
-   const { toggleTheme } = useContext(ThemeContext);
-   const logOut=()=>{
-    setUser(null);
-       localStorage.removeItem("authUser");
-     
-      navigate("/")
-  }
 
   return (
     <nav className="topbar  d-flex   ">
@@ -45,7 +36,7 @@ export default function Topbar({ toggleSidebar }) {
       </div>
       <div className="d-flex ms-auto  align-items-center">
          <div className="">
-          <i onClick={toggleTheme} className="me-2 bi bi-brightness-high"  ></i>
+          
           {/* <i className="bi bi-search d-lg-none search me-2"></i>
           <i className="bi bi-tv me-2"></i>
           <i className="bi bi-bell me-2 "></i> */}
@@ -62,8 +53,8 @@ export default function Topbar({ toggleSidebar }) {
           <p className="p-0 m-0" style={{ fontSize: "10px" }}>{user?.email}</p>
         </div>
       </div>
-      <button className="btn btn-primary p-0 m-0 ms-3 px-2 py-1 d-none d-md-block" onClick={logOut} style={{fontSize:"10px"}}>log out</button>
-      <i className="bi bi-box-arrow-left p-0 m-0 ms-1 py-1  d-md-none" onClick={logOut} ></i>
+      {/* <button className="btn btn-primary p-0 m-0 ms-3 px-2 py-1 d-none d-md-block" onClick={logOut} style={{fontSize:"10px"}}>log out</button>
+      <i className="bi bi-box-arrow-left p-0 m-0 ms-1 py-1  d-md-none" onClick={logOut} ></i> */}
 
     </nav>
 

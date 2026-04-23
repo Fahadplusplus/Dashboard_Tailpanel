@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 function AddEmployeeModal({ show, onClose,onEmployeeAdded }) {
 
@@ -65,6 +66,16 @@ function AddEmployeeModal({ show, onClose,onEmployeeAdded }) {
           createdAt: new Date().toISOString(),
         });
         onEmployeeAdded();
+         toast.success("User Added", {
+                        position: "top-right",
+                        autoClose: 1000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+
+
+                    });
         handleClose();
       } catch (e) {
         console.error(e);
@@ -147,7 +158,7 @@ function AddEmployeeModal({ show, onClose,onEmployeeAdded }) {
 
           <div className="modal-footer">
             <button className="btn-cancel" onClick={handleClose}>Cancel</button>
-            <button className="btn-submit" onClick={handleSubmit}>Add Employee</button>
+            <button className="btn-submit" onClick={handleSubmit}>Add User</button>
           </div>
 
         </div>

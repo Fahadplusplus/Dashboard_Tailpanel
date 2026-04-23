@@ -2,7 +2,7 @@ import React from 'react'
 
 function TopPerforming() {
  return (
-      <div className="bg-white rounded-3 shadow-sm p-3">
+      <div className="Order p-3">
                 <h3>Top Performing Pages</h3>
                 <div className="my-4">
 

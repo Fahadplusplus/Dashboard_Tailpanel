@@ -7,15 +7,16 @@ import Table from "../components/layout/analyticsCard/Table";
 
 const Analytic = () => {
   const userGrowthOptions = {
-  chart: { type: "area" },
-  title: { text: "User Growth" },
+  chart: { type: "area", backgroundColor: "var(--chart-bg)" ,
+        borderRadius: 12 },
+  title: { text: "User Growth" , style: { color:"var(--text)" }},
 
   xAxis: {
-    categories: ["May", "Jun", "Jul", "Aug", "Sep", "Oct"]
+    categories: ["May", "Jun", "Jul", "Aug", "Sep", "Oct"], labels: { style: { color: "var(--text)" }}
   },
 
   yAxis: {
-    title: { text: "Users" }
+    title: { text: "Users" }, labels: { style: { color: "var(--text)" }}
   },
 
   plotOptions: {
@@ -39,15 +40,16 @@ const Analytic = () => {
   ]
 };
 const pageViewsOptions = {
-  chart: { type: "column" },
-  title: { text: "Page Views (Last 7 Days)" },
+  chart: { type: "column", backgroundColor: "var(--chart-bg)" ,
+        borderRadius: 12  },
+  title: { text: "Page Views (Last 7 Days)" , style: { color:"var(--text)" } },
 
   xAxis: {
-    categories: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    categories: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"] , labels: { style: { color: "var(--text)" }}
   },
 
   yAxis: {
-    title: { text: "Views" }
+    title: { text: "Views" } , labels: { style: { color: "var(--text)" }}
   },
 
   series: [
@@ -64,8 +66,9 @@ const pageViewsOptions = {
   ]
 };
 const trafficOptions = {
-  chart: { type: "pie" },
-  title: { text: "Traffic Sources" },
+  chart: { type: "pie", backgroundColor: "var(--chart-bg)" ,
+        borderRadius: 12  },
+  title: { text: "Traffic Sources", style: { color:"var(--text)" } },
 
   plotOptions: {
     pie: {

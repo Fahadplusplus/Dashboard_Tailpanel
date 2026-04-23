@@ -52,52 +52,76 @@
   ],
   "productsData": [
     {
-      "id": "9400",
-      "name": "EasyPick",
-      "category": "Bag",
-      "price": "200",
+      "id": "3ed7",
+      "name": "Watch",
+      "category": "Electronic",
+      "price": "100",
       "stock": "In Stock",
       "quantity": "10",
-      "sold": "2",
-      "sku": "ASD-526",
-      "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "image": "https://res.cloudinary.com/dcbptp5nf/image/upload/v1775819686/wcrkcsyvk64hc8ps1xp9.jpg"
+      "sold": "0",
+      "sku": "PRD-001",
+      "description": "this is a smart watch",
+      "image": "https://res.cloudinary.com/dcbptp5nf/image/upload/v1776403064/wgrsdzirygszcf5zgwsz.jpg"
     },
     {
-      "id": "459f",
-      "name": "dflkn",
-      "category": "jhvuhv",
-      "price": "45",
+      "id": "b0ec",
+      "name": "Lamp",
+      "category": "Electronic",
+      "price": "15",
       "stock": "In Stock",
-      "quantity": "4",
+      "quantity": "23",
       "sold": "1",
-      "sku": "FGH-455",
-      "description": "kjhvhjvjhvjvjh",
-      "image": "https://res.cloudinary.com/dcbptp5nf/image/upload/v1775820809/kn01hdcelxunqlcgubxh.jpg"
+      "sku": "UHI-002",
+      "description": "This is a lamp",
+      "image": "https://res.cloudinary.com/dcbptp5nf/image/upload/v1776407024/q3z2utavxktl0izvxc09.jpg"
     },
     {
-      "id": "ba2e",
-      "name": "gahj",
-      "category": "jhbjhb",
-      "price": "78",
-      "stock": "In Stock",
-      "quantity": "78",
-      "sold": "8",
-      "sku": "POI-098",
-      "description": "jhbjhbjnkjnjkn",
-      "image": "https://res.cloudinary.com/dcbptp5nf/image/upload/v1775825723/gozbzelq2bcgi5fm3ntn.jpg"
+      "id": "98b3",
+      "name": "Coffee",
+      "category": "Food",
+      "price": "5",
+      "stock": "Low Stock",
+      "quantity": "19",
+      "sold": "12",
+      "sku": "COF-002",
+      "description": "This is Coffee",
+      "image": "https://res.cloudinary.com/dcbptp5nf/image/upload/v1776407076/un7ndknmtfhvuoreoom9.jpg"
     },
     {
-      "id": "2817",
-      "name": ";em;asm",
-      "category": "kldkslks",
-      "price": "4",
+      "id": "3f3f",
+      "name": "New Balance",
+      "category": "FootWear",
+      "price": "26",
       "stock": "In Stock",
-      "quantity": "4",
-      "sold": "4",
-      "sku": "PIU-123",
-      "description": "ksmdklnmaks",
-      "image": "https://res.cloudinary.com/dcbptp5nf/image/upload/v1775891012/auptfcdtem6ti2rguy8d.jpg"
+      "quantity": "50",
+      "sold": "12",
+      "sku": "CFT-004",
+      "description": "This is a shoe",
+      "image": "https://res.cloudinary.com/dcbptp5nf/image/upload/v1776407143/wv0djzhlh3iikerilgo9.jpg"
+    },
+    {
+      "id": "a35f",
+      "name": "HeadPhone",
+      "category": "Electronic",
+      "price": "37",
+      "stock": "In Stock",
+      "quantity": "46",
+      "sold": "10",
+      "sku": "UYT-005",
+      "description": "This is a Head phone",
+      "image": "https://res.cloudinary.com/dcbptp5nf/image/upload/v1776407200/ajhgryefdxefqoq4tn4e.jpg"
+    },
+    {
+      "id": "75cd",
+      "name": "Lamp",
+      "category": "lamp",
+      "price": "45",
+      "stock": "Low Stock",
+      "quantity": "45",
+      "sold": "12",
+      "sku": "IUY-009",
+      "description": "this kkkkkkkkkkkkkk",
+      "image": "https://res.cloudinary.com/dcbptp5nf/image/upload/v1776409666/bj7vgpda4hrx5aiwatwh.jpg"
     }
   ],
   "cardsData": [
@@ -182,6 +206,13 @@
       "email": "admin@gmail.com",
       "password": "admin123",
       "confirmPassword": "admin123"
+    },
+    {
+      "id": "1efe",
+      "username": "Fahad Nasir",
+      "email": "fahadnasir@gmail.com",
+      "password": "2486009k",
+      "confirmPassword": "2486009k"
     }
   ],
   "employs": [
@@ -472,6 +503,38 @@
       "role": "Admin",
       "status": "Active",
       "createdAt": "2026-04-16T10:40:36.357Z"
+    },
+    {
+      "id": "cb8e",
+      "fullname": "fahad",
+      "email": "fahad@gmain.com",
+      "role": "Admin",
+      "status": "Active",
+      "createdAt": "2026-04-23T06:18:29.923Z"
+    },
+    {
+      "id": "a75c",
+      "fullname": "asad",
+      "email": "asad@gmail.com",
+      "role": "Admin",
+      "status": "Active",
+      "createdAt": "2026-04-23T06:24:14.681Z"
+    },
+    {
+      "id": "e613",
+      "fullname": "abcd",
+      "email": "abcg@gmail.com",
+      "role": "Developer",
+      "status": "Pending",
+      "createdAt": "2026-04-23T06:25:02.149Z"
+    },
+    {
+      "id": "9e02",
+      "fullname": "asdf",
+      "email": "asdf@gmail.com",
+      "role": "Admin",
+      "status": "Active",
+      "createdAt": "2026-04-23T07:04:47.579Z"
     }
   ]
 }
