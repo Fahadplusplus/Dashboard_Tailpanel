@@ -553,8 +553,13 @@ table.dataTable tbody tr:hover {
 }
   .product-img{
   width: 370px;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-bottom: 10px;
+
+}
+.card-img-t {
+  width: 100%;
+ 
 }
 
 .input-field{
@@ -676,4 +681,68 @@ table.dataTable tbody tr:hover {
 .avatar {
   width: 70px;
   border-radius: 50%;
+}
+.edit-btn {
+  background-color: #0d6efd; /* blue */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background-color: #0b5ed7;
+}
+
+.delete-btn {
+  background-color: #dc3545; /* red */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #bb2d3b;
+}
+
+/* Overlay */
+.custom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1040;
+}
+
+/* Side panel */
+.custom-offcanvas {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100%;
+  background: white;
+  z-index: 1050;
+  padding: 20px;
+  overflow-y: auto;
+
+  /* animation */
+  transform: translateX(0);
+}
+
+/* Optional smooth animation */
+.custom-offcanvas {
+  background-color: var(--Card-bg);
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
 }

@@ -52,16 +52,16 @@
   ],
   "productsData": [
     {
-      "id": "3ed7",
-      "name": "Watch",
-      "category": "Electronic",
-      "price": "100",
-      "stock": "In Stock",
-      "quantity": "10",
-      "sold": "0",
-      "sku": "PRD-001",
-      "description": "this is a smart watch",
-      "image": "https://res.cloudinary.com/dcbptp5nf/image/upload/v1776403064/wgrsdzirygszcf5zgwsz.jpg"
+      "id": "98b3",
+      "name": "Coffee",
+      "category": "Home",
+      "price": "5",
+      "stock": "Low Stock",
+      "quantity": "19",
+      "sold": "12",
+      "sku": "COF-002",
+      "description": "This is Coffee",
+      "image": "https://res.cloudinary.com/dcbptp5nf/image/upload/v1776407076/un7ndknmtfhvuoreoom9.jpg"
     },
     {
       "id": "b0ec",
@@ -110,18 +110,6 @@
       "sku": "UYT-005",
       "description": "This is a Head phone",
       "image": "https://res.cloudinary.com/dcbptp5nf/image/upload/v1776407200/ajhgryefdxefqoq4tn4e.jpg"
-    },
-    {
-      "id": "75cd",
-      "name": "Lamp",
-      "category": "lamp",
-      "price": "45",
-      "stock": "Low Stock",
-      "quantity": "45",
-      "sold": "12",
-      "sku": "IUY-009",
-      "description": "this kkkkkkkkkkkkkk",
-      "image": "https://res.cloudinary.com/dcbptp5nf/image/upload/v1776409666/bj7vgpda4hrx5aiwatwh.jpg"
     }
   ],
   "cardsData": [
@@ -217,284 +205,58 @@
   ],
   "employs": [
     {
-      "id": "1",
-      "fullname": "Ali Khan",
-      "email": "ali@gmail.com",
-      "role": "Admin",
-      "status": "Active",
-      "createdAt": "2026-04-14T10:30:00Z"
-    },
-    {
-      "id": "2",
-      "fullname": "Sara Ahmed",
+      "fullname": "Sara Khan",
       "email": "sara@gmail.com",
-      "role": "User",
-      "status": "Pending",
-      "createdAt": "2026-04-14T10:30:00Z"
-    },
-    {
-      "id": "3",
-      "fullname": "Usman Tariq",
-      "email": "usman@gmail.com",
-      "role": "Developer",
-      "status": "Active",
-      "createdAt": "2026-04-14T10:30:00Z"
-    },
-    {
-      "id": "4",
-      "fullname": "Hina Malik",
-      "email": "hina@gmail.com",
-      "role": "Manager",
-      "status": "Active",
-      "createdAt": "2026-04-14T10:30:00Z"
-    },
-    {
-      "id": "5",
-      "fullname": "Bilal Raza",
-      "email": "bilal@gmail.com",
-      "role": "User",
-      "status": "Inactive",
-      "createdAt": "2026-04-14T10:30:00Z"
-    },
-    {
-      "id": "6",
-      "fullname": "Ayesha Noor",
-      "email": "ayesha@gmail.com",
-      "role": "Admin",
-      "status": "Active",
-      "createdAt": "2026-04-14T10:30:00Z"
-    },
-    {
-      "id": "7",
-      "fullname": "Zain Ali",
-      "email": "zain@gmail.com",
-      "role": "Developer",
-      "status": "Pending",
-      "createdAt": "2026-04-14T10:30:00Z"
-    },
-    {
-      "id": "8",
-      "fullname": "Fatima Zahra",
-      "email": "fatima@gmail.com",
-      "role": "Manager",
-      "status": "Active",
-      "createdAt": "2026-04-14T10:30:00Z"
-    },
-    {
-      "id": "9",
-      "fullname": "Hamza Siddiqui",
-      "email": "hamza@gmail.com",
-      "role": "User",
-      "status": "Active",
-      "createdAt": "2026-04-14T10:30:00Z"
-    },
-    {
-      "id": "10",
-      "fullname": "Mariam Khan",
-      "email": "mariam@gmail.com",
-      "role": "Developer",
-      "status": "Inactive",
-      "createdAt": "2026-04-14T10:30:00Z"
-    },
-    {
-      "id": "11",
-      "fullname": "Maira Khan",
-      "email": "maira@gmail.com",
       "role": "Admin",
       "status": "Inactive",
-      "createdAt": "2026-04-14T10:30:00Z"
+      "createdAt": "2026-04-15T10:15:33.483Z",
+      "updatedAt": "2026-04-24T06:56:47.497Z",
+      "id": "a0b8"
     },
     {
-      "id": "1b10",
-      "fullname": "fahad nasir",
-      "email": "fahad@gmail.com",
+      "fullname": "Saba Ali",
+      "email": "saba@gmai.com",
       "role": "Admin",
-      "status": "Active",
-      "createdAt": "2026-04-15T07:40:11.016Z"
+      "status": "Inactive",
+      "createdAt": "2026-04-15T10:24:19.195Z",
+      "updatedAt": "2026-04-24T06:59:58.214Z",
+      "id": "e4c0"
     },
     {
-      "id": "3470",
-      "fullname": "test",
-      "email": "test@gmail.com",
-      "role": "Admin",
-      "status": "Active",
-      "createdAt": "2026-04-15T09:49:58.214Z"
-    },
-    {
-      "id": "f009",
-      "fullname": "akjshkjkj",
-      "email": "jkkja@gmail.com",
-      "role": "Admin",
-      "status": "Active",
-      "createdAt": "2026-04-15T10:00:21.092Z"
-    },
-    {
-      "id": "82f9",
-      "fullname": "ssdfsdf",
-      "email": "sdsdf@gmail.com",
+      "fullname": "Javed Ali",
+      "email": "javed@gmai.com",
       "role": "Admin",
       "status": "Pending",
-      "createdAt": "2026-04-15T10:08:20.385Z"
+      "createdAt": "2026-04-15T10:25:13.544Z",
+      "updatedAt": "2026-04-24T06:59:24.899Z",
+      "id": "dcd2"
     },
     {
-      "id": "a0b8",
-      "fullname": "sdfsd",
-      "email": "sdfds@gmail.com",
+      "fullname": "Asad Zahidd",
+      "email": "asad@gmai.com",
       "role": "Admin",
-      "status": "Active",
-      "createdAt": "2026-04-15T10:15:33.483Z"
-    },
-    {
-      "id": "e4c0",
-      "fullname": "sdn ",
-      "email": "kbksjdb@gmai.com",
-      "role": "Admin",
-      "status": "Active",
-      "createdAt": "2026-04-15T10:24:19.195Z"
-    },
-    {
-      "id": "dcd2",
-      "fullname": "sdn ",
-      "email": "kbksjdb@gmai.com",
-      "role": "Admin",
-      "status": "Active",
-      "createdAt": "2026-04-15T10:25:13.544Z"
-    },
-    {
-      "id": "7f67",
-      "fullname": "sdn ",
-      "email": "kbksjdb@gmai.com",
-      "role": "Admin",
-      "status": "Active",
-      "createdAt": "2026-04-15T10:25:14.598Z"
-    },
-    {
-      "id": "84a1",
-      "fullname": "sdn ",
-      "email": "kbksjdb@gmai.com",
-      "role": "Admin",
-      "status": "Active",
-      "createdAt": "2026-04-15T10:25:15.201Z"
-    },
-    {
-      "id": "8058",
-      "fullname": "sdn ",
-      "email": "kbksjdb@gmai.com",
-      "role": "Admin",
-      "status": "Active",
-      "createdAt": "2026-04-15T10:25:15.385Z"
-    },
-    {
-      "id": "27de",
-      "fullname": "sdn ",
-      "email": "kbksjdb@gmai.com",
-      "role": "Admin",
-      "status": "Active",
-      "createdAt": "2026-04-15T10:25:15.565Z"
-    },
-    {
-      "id": "f39f",
-      "fullname": "asd",
-      "email": "asdQ@gmail.com",
-      "role": "Admin",
-      "status": "Active",
-      "createdAt": "2026-04-15T10:29:47.058Z"
-    },
-    {
-      "id": "63db",
-      "fullname": "asd",
-      "email": "asdQ@gmail.com",
-      "role": "Admin",
-      "status": "Active",
-      "createdAt": "2026-04-15T10:30:51.720Z"
-    },
-    {
-      "id": "0a0f",
-      "fullname": "sdl",
-      "email": "mljkd@gmail.com",
-      "role": "Admin",
-      "status": "Active",
-      "createdAt": "2026-04-15T10:33:17.225Z"
-    },
-    {
-      "id": "6b2f",
-      "fullname": "lkdflkn",
-      "email": "lksndlkc@gmai.com",
-      "role": "Developer",
       "status": "Pending",
-      "createdAt": "2026-04-15T10:37:14.965Z"
+      "createdAt": "2026-04-15T10:25:15.201Z",
+      "updatedAt": "2026-04-24T10:45:35.946Z",
+      "id": "84a1"
     },
     {
-      "id": "1d32",
-      "fullname": "fahag",
-      "email": "gajh@gmail.com",
+      "fullname": "Umair Khan",
+      "email": "umair@gmail.com",
+      "role": "Admin",
+      "status": "Active",
+      "createdAt": "2026-04-15T10:29:47.058Z",
+      "updatedAt": "2026-04-24T07:01:02.772Z",
+      "id": "f39f"
+    },
+    {
+      "fullname": "Qasim Ali",
+      "email": "qasim@gmail.com",
       "role": "Manager",
       "status": "Inactive",
-      "createdAt": "2026-04-15T10:40:54.897Z"
-    },
-    {
-      "id": "88d1",
-      "fullname": "fahag",
-      "email": "gajh@gmail.com",
-      "role": "Manager",
-      "status": "Inactive",
-      "createdAt": "2026-04-15T10:41:50.878Z"
-    },
-    {
-      "id": "7763",
-      "fullname": "lkns",
-      "email": "lknld@gmai.com",
-      "role": "Developer",
-      "status": "Pending",
-      "createdAt": "2026-04-15T11:01:58.282Z"
-    },
-    {
-      "id": "6ceb",
-      "fullname": "lkns",
-      "email": "lknld@gmai.com",
-      "role": "Developer",
-      "status": "Pending",
-      "createdAt": "2026-04-15T11:02:31.000Z"
-    },
-    {
-      "id": "301d",
-      "fullname": "sdn",
-      "email": "khsbdk@gmail.com",
-      "role": "Developer",
-      "status": "Inactive",
-      "createdAt": "2026-04-15T11:05:36.422Z"
-    },
-    {
-      "id": "5676",
-      "fullname": "sdsmd ",
-      "email": "hdbh@gmai.com",
-      "role": "Developer",
-      "status": "Pending",
-      "createdAt": "2026-04-15T11:11:27.562Z"
-    },
-    {
-      "id": "3e90",
-      "fullname": "fah",
-      "email": "hhjh@gmail.com",
-      "role": "Developer",
-      "status": "Pending",
-      "createdAt": "2026-04-15T11:25:57.187Z"
-    },
-    {
-      "id": "099d",
-      "fullname": "nlnl",
-      "email": "nlk@gmail.com",
-      "role": "Admin",
-      "status": "Active",
-      "createdAt": "2026-04-15T11:26:25.708Z"
-    },
-    {
-      "id": "6a48",
-      "fullname": "mohsin raza",
-      "email": "raza@gmail.com",
-      "role": "Developer",
-      "status": "Active",
-      "createdAt": "2026-04-16T05:43:58.339Z"
+      "createdAt": "2026-04-15T10:41:50.878Z",
+      "updatedAt": "2026-04-24T06:55:53.226Z",
+      "id": "88d1"
     },
     {
       "id": "b55f",
@@ -505,36 +267,48 @@
       "createdAt": "2026-04-16T10:40:36.357Z"
     },
     {
-      "id": "cb8e",
-      "fullname": "fahad",
-      "email": "fahad@gmain.com",
+      "fullname": "Hassan Nasir",
+      "email": "hassan@gmain.com",
       "role": "Admin",
-      "status": "Active",
-      "createdAt": "2026-04-23T06:18:29.923Z"
+      "status": "Inactive",
+      "createdAt": "2026-04-23T06:18:29.923Z",
+      "updatedAt": "2026-04-24T06:58:45.142Z",
+      "id": "cb8e"
     },
     {
-      "id": "a75c",
-      "fullname": "asad",
+      "fullname": "Asad Naeem",
       "email": "asad@gmail.com",
       "role": "Admin",
       "status": "Active",
-      "createdAt": "2026-04-23T06:24:14.681Z"
+      "createdAt": "2026-04-23T06:24:14.681Z",
+      "updatedAt": "2026-04-24T06:58:12.602Z",
+      "id": "a75c"
     },
     {
-      "id": "e613",
-      "fullname": "abcd",
-      "email": "abcg@gmail.com",
+      "fullname": "Mohsin Ali",
+      "email": "mohsin@gmail.com",
       "role": "Developer",
       "status": "Pending",
-      "createdAt": "2026-04-23T06:25:02.149Z"
+      "createdAt": "2026-04-23T06:25:02.149Z",
+      "updatedAt": "2026-04-24T07:00:37.359Z",
+      "id": "e613"
     },
     {
-      "id": "9e02",
-      "fullname": "asdf",
-      "email": "asdf@gmail.com",
+      "fullname": "Asif Sheikh test",
+      "email": "asif@gmail.com",
       "role": "Admin",
       "status": "Active",
-      "createdAt": "2026-04-23T07:04:47.579Z"
+      "createdAt": "2026-04-23T07:04:47.579Z",
+      "updatedAt": "2026-04-24T07:11:40.702Z",
+      "id": "9e02"
+    },
+    {
+      "id": "b168",
+      "fullname": "jbkjbkj",
+      "email": "bkjbkb@gmail.com",
+      "role": "Admin",
+      "status": "Active",
+      "createdAt": "2026-04-24T10:45:19.338Z"
     }
   ]
 }

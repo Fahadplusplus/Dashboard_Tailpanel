@@ -15,63 +15,63 @@ function EaddProducts() {
 
 
   const [product, setProduct] = useState({
-    
+
     name: "",
     category: "",
-    price: "" ,
+    price: "",
     stock: "",
     quantity: "",
     sold: "",
-    sku:"",
-    description:"",
+    sku: "",
+    description: "",
   });
-  
 
 
-//  const handleImageChange = (e) => {
-//   const file = e.target.files[0];
-//   if (!file) return;
 
-//   let newErrors = {};
+  //  const handleImageChange = (e) => {
+  //   const file = e.target.files[0];
+  //   if (!file) return;
+
+  //   let newErrors = {};
 
 
-//   const fileName = file.name.toLowerCase();
-//   const fileExt = fileName.includes(".")
-//     ? fileName.split(".").pop()
-//     : "";
+  //   const fileName = file.name.toLowerCase();
+  //   const fileExt = fileName.includes(".")
+  //     ? fileName.split(".").pop()
+  //     : "";
 
-//   const validExtensions = ["jpg", "jpeg", "png", "gif"];
+  //   const validExtensions = ["jpg", "jpeg", "png", "gif"];
 
- 
-//   if (
-//     !file.type.startsWith("image/") &&
-//     !validExtensions.includes(fileExt)
-//   ) {
-//     newErrors.image = "Only image files (JPG, PNG, GIF) are allowed";
-//   }
-  
 
-  
-//   if (file.size > 5 * 1024 * 1024) {
-//     newErrors.image = "File must be less than 5MB";
-//   }
+  //   if (
+  //     !file.type.startsWith("image/") &&
+  //     !validExtensions.includes(fileExt)
+  //   ) {
+  //     newErrors.image = "Only image files (JPG, PNG, GIF) are allowed";
+  //   }
 
-//   if (Object.keys(newErrors).length > 0) {
-//     setError((prev) => ({
-//       ...prev,
-//       ...newErrors,
-//     }));
-//     return;
-//   }
 
-//   setImageFile(file);
 
-//   // clear error
-//   setError((prev) => ({
-//     ...prev,
-//     image: "",
-//   }));
-// };
+  //   if (file.size > 5 * 1024 * 1024) {
+  //     newErrors.image = "File must be less than 5MB";
+  //   }
+
+  //   if (Object.keys(newErrors).length > 0) {
+  //     setError((prev) => ({
+  //       ...prev,
+  //       ...newErrors,
+  //     }));
+  //     return;
+  //   }
+
+  //   setImageFile(file);
+
+  //   // clear error
+  //   setError((prev) => ({
+  //     ...prev,
+  //     image: "",
+  //   }));
+  // };
 
   const handleImageUpload = async (file) => {
     const formData = new FormData();
@@ -94,15 +94,15 @@ function EaddProducts() {
 
   const handleCancel = () => {
     setProduct({
-      
-    name: "",
-    category: "",
-    price: " ",
-    stock: "",
-    quantity: "",
-    sold: "",
-    sku:"",
-    description:"",
+
+      name: "",
+      category: "",
+      price: " ",
+      stock: "",
+      quantity: "",
+      sold: "",
+      sku: "",
+      description: "",
     });
     setError("")
   }
@@ -110,8 +110,8 @@ function EaddProducts() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setProduct((prev) =>({
-      ...prev, [name]:value
+    setProduct((prev) => ({
+      ...prev, [name]: value
     }))
   };
 
@@ -136,16 +136,16 @@ function EaddProducts() {
       await axios.post("http://localhost:8000/productsData", newProduct);
 
       setProduct({
-         name: "",
-    category: "",
-    price: " ",
-    stock: "",
-    quantity: "",
-    sold: "",
-    sku:"",
-    description:"",
+        name: "",
+        category: "",
+        price: " ",
+        stock: "",
+        quantity: "",
+        sold: "",
+        sku: "",
+        description: "",
       });
-      
+
       navigate("/eproduct");
       setLoading(false);
 
@@ -156,62 +156,62 @@ function EaddProducts() {
   const validate = () => {
     let newError = {}
 
-     if (!product.name.trim()) {
-    newError.name = "Product name is required";
-  } else if (product.name.length < 3) {
-    newError.name = "Minimum 3 characters required";
-  } else if (product.name.length > 50) {
-    newError.name = "Maximum 50 characters allowed";
-  }
+    if (!product.name.trim()) {
+      newError.name = "Product name is required";
+    } else if (product.name.length < 3) {
+      newError.name = "Minimum 3 characters required";
+    } else if (product.name.length > 50) {
+      newError.name = "Maximum 50 characters allowed";
+    }
 
 
-  const skuRegex = /^[A-Z0-9-]+$/;
-  if (!product.sku.trim()) {
-    newError.sku = "SKU is required";
-  } else if (!skuRegex.test(product.sku)) {
-    newError.sku = "SKU must be uppercase letters, numbers, or dashes";
-  }
-
-  
-  if (!product.category.trim()) {
-    newError.category = "Category is required";
-  } else if (product.category.length < 3) {
-    newError.category = "Category must be at least 3 characters";
-  }
+    const skuRegex = /^[A-Z0-9-]+$/;
+    if (!product.sku.trim()) {
+      newError.sku = "SKU is required";
+    } else if (!skuRegex.test(product.sku)) {
+      newError.sku = "SKU must be uppercase letters, numbers, or dashes";
+    }
 
 
-  if (!product.description.trim()) {
-    newError.description = "Description is required";
-  } else if (product.description.length < 10) {
-    newError.description = "Description must be at least 10 characters";
-  } else if (product.description.length > 200) {
-    newError.description = "Max 200 characters allowed";
-  }
+    if (!product.category.trim()) {
+      newError.category = "Category is required";
+    } else if (product.category.length < 3) {
+      newError.category = "Category must be at least 3 characters";
+    }
 
-  
-if (!product.price) {
-    newError.price = "Price is required";
-  } else if (isNaN(product.price) || Number(product.price) <= 0) {
-    newError.price = "Price must be a positive number";
-  }
 
-  
-  if (!product.quantity) {
-    newError.quantity = "Quantity is required";
-  } else if (!Number.isInteger(Number(product.quantity)) || Number(product.quantity) < 0) {
-    newError.quantity = "Quantity must be a valid non-negative integer";
-  }
+    if (!product.description.trim()) {
+      newError.description = "Description is required";
+    } else if (product.description.length < 10) {
+      newError.description = "Description must be at least 10 characters";
+    } else if (product.description.length > 200) {
+      newError.description = "Max 200 characters allowed";
+    }
 
-  
-  if (product.sold === "") {
-    newError.sold = "Sold value is required";
-  } else if (!Number.isInteger(Number(product.sold)) || Number(product.sold) < 0) {
-    newError.sold = "Sold must be a valid non-negative integer";
-  } else if (Number(product.sold) > Number(product.quantity)) {
-    newError.sold = "Sold cannot exceed quantity";
-  }
- 
-    
+
+    if (!product.price) {
+      newError.price = "Price is required";
+    } else if (isNaN(product.price) || Number(product.price) <= 0) {
+      newError.price = "Price must be a positive number";
+    }
+
+
+    if (!product.quantity) {
+      newError.quantity = "Quantity is required";
+    } else if (!Number.isInteger(Number(product.quantity)) || Number(product.quantity) < 0) {
+      newError.quantity = "Quantity must be a valid non-negative integer";
+    }
+
+
+    if (product.sold === "") {
+      newError.sold = "Sold value is required";
+    } else if (!Number.isInteger(Number(product.sold)) || Number(product.sold) < 0) {
+      newError.sold = "Sold must be a valid non-negative integer";
+    } else if (Number(product.sold) > Number(product.quantity)) {
+      newError.sold = "Sold cannot exceed quantity";
+    }
+
+
 
 
     setError(newError)
@@ -264,27 +264,43 @@ if (!product.price) {
                     placeholder="PRD-001"
                   />
                   {error.sku && (
-                  <div className="invalid-feedback">{error.sku}</div>
-                )}
+                    <div className="invalid-feedback">{error.sku}</div>
+                  )}
 
                 </div>
-
                 <div className="col-md-6 mb-3">
                   <label className="form-label">Category *</label>
-                  <input
-                    type="text"
-                     className={`form-control ${error.category ? "is-invalid" : ""} input-field `}
+
+                  <select
+                    className={`form-control ${error.category ? "is-invalid" : ""} input-field`}
                     name="category"
                     value={product.category}
                     onChange={handleChange}
-                    placeholder="Electronics"
-                  />
-                   {error.category && (
-                  <div className="invalid-feedback">{error.category}</div>
-                )}
-                   
+
+                  >
+
+                    
+                    <option value="">Select Category</option>
+                    
+
+                  
+                    <option value="Electronics">Electronics</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Shoes">Shoes</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Home">Home</option>
+                    <option value="Beauty">Beauty</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Books">Books</option>
+                    ```
+
+                  </select>
+
+                  {error.category && (<div className="invalid-feedback">{error.category}</div>
+                  )}
 
                 </div>
+
               </div>
 
               <div className="mb-3">
@@ -297,14 +313,14 @@ if (!product.price) {
                   onChange={handleChange}
                   placeholder="Enter product description"
                 />
-                 {error.description && (
+                {error.description && (
                   <div className="invalid-feedback">{error.description}</div>
                 )}
 
               </div>
             </div>
 
-            
+
             <div className="Order p-4">
               <h5 className="mb-3">Pricing & Inventory</h5>
 
@@ -313,15 +329,15 @@ if (!product.price) {
                   <label className="form-label">Price *</label>
                   <input
                     type="number"
-                     className={`form-control ${error.price ? "is-invalid" : ""} input-field  `}
+                    className={`form-control ${error.price ? "is-invalid" : ""} input-field  `}
                     name="price"
                     value={product.price}
                     onChange={handleChange}
                     placeholder="$ 0.00"
                   />
-                   {error.price && (
-                  <div className="invalid-feedback">{error.price}</div>
-                )}
+                  {error.price && (
+                    <div className="invalid-feedback">{error.price}</div>
+                  )}
 
                 </div>
 
@@ -330,15 +346,15 @@ if (!product.price) {
                   <input
                     type="number"
                     className={`form-control ${error.quantity ? "is-invalid" : ""} input-field `}
-                    
+
                     name="quantity"
                     value={product.quantity}
                     onChange={handleChange}
                     placeholder="0"
                   />
-                   {error.quantity && (
-                  <div className="invalid-feedback">{error.quantity}</div>
-                )}
+                  {error.quantity && (
+                    <div className="invalid-feedback">{error.quantity}</div>
+                  )}
 
                 </div>
 
@@ -352,9 +368,9 @@ if (!product.price) {
                     value={product.sold}
                     onChange={handleChange}
                   />
-                   {error.sold && (
-                  <div className="invalid-feedback">{error.sold}</div>
-                )}
+                  {error.sold && (
+                    <div className="invalid-feedback">{error.sold}</div>
+                  )}
 
                 </div>
 
@@ -362,7 +378,7 @@ if (!product.price) {
                   <label className="form-label">Stock Status</label>
                   <select
                     className="form-select input-field  "
-                    
+
                     name="stock"
                     value={product.stock}
                     onChange={handleChange}
@@ -378,10 +394,10 @@ if (!product.price) {
 
           </div>
 
-        
+
           <div className="col-lg-4">
 
-          
+
             <div className="Order p-4 mb-4 text-center">
               <h5 className="mb-3">Product Image</h5>
               <ImageUpload
@@ -437,8 +453,8 @@ if (!product.price) {
 
         </div>
       </form>
-    
- 
+
+
     </div>
   );
 }

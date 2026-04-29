@@ -8,7 +8,19 @@ const cardConfig = [
   { id: 4, label: "Inactive Users", icon: "bi bi-person-x-fill",     valueKey: "inactive" },
 ];
 
-function UsersCard({ users = [] }) { // ← receive users, no useEffect/axios
+function UsersCard({ users = [],onFilterChange }) { // ← receive users, no useEffect/axios
+    const handleClick = (type) => {
+  if (type === "total") {
+    
+    
+    onFilterChange("all");
+  } else {
+
+    onFilterChange(type);
+    
+  }
+};
+
   const stats = {
     total:    users.length,
     active:   users.filter(e => e.status === "Active").length,
@@ -19,7 +31,12 @@ function UsersCard({ users = [] }) { // ← receive users, no useEffect/axios
   return (
     <>
       {cardConfig.map((ele) => (
-        <div className="col-12 col-md-6 col-xxl-3 g-3" key={ele.id}>
+        <div 
+        className="col-12 col-md-6 col-xxl-3 g-3" 
+        key={ele.id}
+        onClick={() => handleClick(ele.valueKey)} 
+          style={{ cursor: "pointer" }}
+        >
           <UserCarditem item={ele} value={stats[ele.valueKey]} />
         </div>
       ))}

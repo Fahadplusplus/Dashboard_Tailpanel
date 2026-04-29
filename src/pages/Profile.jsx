@@ -6,7 +6,7 @@ import LogoutModal from "../components/layout/profile/LogoutModal";
 
 export default function Profile() {
   const {user} = useContext(UserContext)
-  const { toggleTheme } = useContext(ThemeContext);
+  const { toggleTheme,theme} = useContext(ThemeContext);
 
     const [showModal, setShowModal] = useState(false);
     
@@ -39,6 +39,7 @@ export default function Profile() {
               className="form-check-input"
               type="checkbox"
               id="switch1"
+              checked={theme==="dark"}
               onChange={toggleTheme}
             />
             <label className="form-check-label" htmlFor="switch1">

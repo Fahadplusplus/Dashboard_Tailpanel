@@ -1,8 +1,8 @@
 import axios from 'axios';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { toast } from 'react-toastify';
 
-function AddEmployeeModal({ show, onClose,onEmployeeAdded }) {
+function AddEmployeeModal({ show, onClose, onEmployeeAdded, btn, user }) {
 
   const [formData, setFormData] = useState({
     fullname: "",
@@ -10,6 +10,27 @@ function AddEmployeeModal({ show, onClose,onEmployeeAdded }) {
     role: "",
     status: "",
   });
+ useEffect(() => {
+  if (btn === "Edit User" && user) {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setFormData({
+      fullname: user.fullname || "",
+      email: user.email || "",
+      role: user.role || "",
+      status: user.status || "",
+      createdAt: user.createdAt || "",
+    });
+  }
+
+  if (btn === "Add User") {
+    setFormData({
+      fullname: "",
+      email: "",
+      role: "",
+      status: "",
+    });
+  }
+}, [user, btn]);
 
   const [errors, setErrors] = useState({});
 
@@ -27,6 +48,8 @@ function AddEmployeeModal({ show, onClose,onEmployeeAdded }) {
   };
 
   const handleClose = () => {
+    console.log(user.fullname);
+
     resetForm();
     onClose();
   };
@@ -58,30 +81,36 @@ function AddEmployeeModal({ show, onClose,onEmployeeAdded }) {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async () => {
-    if (validate()) {
-      try {
-        await axios.post("http://localhost:8000/employs", {
-          ...formData,
-          createdAt: new Date().toISOString(),
-        });
-        onEmployeeAdded();
-         toast.success("User Added", {
-                        position: "top-right",
-                        autoClose: 1000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
+const handleSubmit = async () => {
+  if (!validate()) return;
 
+  try {
+    if (btn === "Add User") {
+      await axios.post("http://localhost:8000/employs", {
+        ...formData,
+        createdAt: new Date().toISOString(),
+      });
 
-                    });
-        handleClose();
-      } catch (e) {
-        console.error(e);
-      }
+      toast.success("User Added",{
+         autoClose: 1000,
+      });
+    } else {
+      await axios.put(`http://localhost:8000/employs/${user.id}`,  {
+        ...formData,
+        updatedAt: new Date().toISOString(),
+      });
+      toast.success("User Updated",{
+         autoClose: 1000,
+      });
     }
-  };
+
+    onEmployeeAdded();
+    handleClose();
+
+  } catch (e) {
+    console.error(e);
+  }
+};
 
   return (
     <>
@@ -91,7 +120,7 @@ function AddEmployeeModal({ show, onClose,onEmployeeAdded }) {
         <div className="modal-box">
 
           <div className="modal-header">
-            <h5 className="modal-title">Add Employee</h5>
+            <h5 className="modal-title">{btn}</h5>
             <button className="modal-close" onClick={handleClose}>✕</button>
           </div>
 
@@ -158,7 +187,7 @@ function AddEmployeeModal({ show, onClose,onEmployeeAdded }) {
 
           <div className="modal-footer">
             <button className="btn-cancel" onClick={handleClose}>Cancel</button>
-            <button className="btn-submit" onClick={handleSubmit}>Add User</button>
+            <button className="btn-submit" onClick={handleSubmit}>{btn}</button>
           </div>
 
         </div>
